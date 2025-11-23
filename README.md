@@ -21,4 +21,4 @@ Der/die Autor/in übernimmt keine Haftung für die weitere Nutzung dieser Dokume
 
 ## Kontakt
 
-Für Anfragen, Hinweise oder Beschwerden: [deine.email@adresse.de]
+Für Anfragen, Hinweise oder Beschwerden: [bbb-api@oliver-eder.de]
