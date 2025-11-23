@@ -1,21 +1,36 @@
-MIT License
+# Lizenz (Deutsch)
 
-Copyright (c) 2025 Oliver-Marcus Eder
+Dieses Werk (Dokumentation und Beispielcode) wird unter der Lizenz  
+**Creative Commons Namensnennung 4.0 International (CC BY 4.0)** veröffentlicht.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Sie dürfen das Material **teilen, vervielfältigen, verbreiten und bearbeiten**, auch für kommerzielle Zwecke, unter der Voraussetzung, dass Sie angemessene Urheber- und Rechteangaben machen, einen Link zur Lizenz beifügen und angeben, ob Änderungen vorgenommen wurden.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Die Rechte an der ursprünglichen API und allen darin enthaltenen Daten verbleiben beim jeweiligen Rechteinhaber (Deutscher Basketball Bund bzw. Basketball-bund.net). Diese Dokumentation stellt keine offizielle API-Dokumentation dar, sondern wurde durch Reverse Engineering öffentlich zugänglicher Schnittstellen erstellt.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Es werden keine echten personenbezogenen oder vertraulichen Daten veröffentlicht. Sollten solche Daten versehentlich enthalten sein, werden sie umgehend entfernt.
+
+Diese Lizenz gewährt keine Rechte an der API selbst oder an anderen Inhalten, die nicht von der/dem Autor/in dieser Dokumentation erstellt wurden.
+
+Für Rückfragen, Hinweise oder rechtliche Anliegen wenden Sie sich bitte an:  
+bbb-api@oliver-eder.de
+
+
+# License (English)
+
+This work (documentation and example code) is licensed under the  
+**Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
+
+You are free to **share, copy, distribute, and adapt** the material, even commercially, provided appropriate credit is given, a link to the license is included, and indication is made if changes were made.
+
+The rights to the original API and all contained data remain with their respective owners (Deutscher Basketball Bund / Basketball-bund.net). This documentation is not an official API documentation but was created by reverse engineering publicly accessible interfaces.
+
+No real personal or confidential data is published. If such data is accidentally included, it will be removed immediately.
+
+This license does not grant any rights to the API itself or other contents not created by the author of this documentation.
+
+For questions, feedback, or legal concerns please contact:  
+bbb-api@oliver-eder.de
+
+
+For more details about the license:  
+https://creativecommons.org/licenses/by/4.0/legalcode
