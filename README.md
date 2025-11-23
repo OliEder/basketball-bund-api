@@ -22,3 +22,9 @@ Der/die Autor/in übernimmt keine Haftung für die weitere Nutzung dieser Dokume
 ## Kontakt
 
 Für Anfragen, Hinweise oder Beschwerden: [bbb-api@oliver-eder.de]
+
+## Lizenz
+
+Dieses Projekt ist unter der [Creative Commons Namensnennung 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) Lizenz lizenziert.
+
+[![License: CC BY 4.0](https://i.creativecommons.org/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
