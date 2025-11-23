@@ -1,0 +1,95 @@
+meta {
+  name: WAM Liga List - Ligen suchen
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseURL}}/rest/wam/liga/list?startAtIndex=0
+  body: json
+  auth: none
+}
+
+params:query {
+  startAtIndex: 0
+}
+
+body:json {
+  {
+    "token":{{token}},
+    "verbandIds":[{{verbaendeIds}}],
+    "gebietIds":[{{gebieteIds}}],
+    "ligatypIds":[{{ligatypenIds}}],
+    "akgGeschlechtIds":[{{agkGeschlechtListIds}}],
+    "altersklasseIds":[{{altersklassenIds}}],
+    "spielklasseIds":[{{spielklassenIds}}]
+  }
+}
+
+vars:pre-request {
+  token: 0
+  verbaendeIds: 2
+  ligatypenIds: 
+  agkGeschlechtListIds: 
+  altersklassenIds: 10
+  spielklassenIds: 
+  gebieteIds: 4
+}
+
+docs {
+  **Query Parameters:**
+  - `startAtIndex` (number): Pagination-Offset (default: 0)
+  
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-17T18:00:00+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "ligaListe": {
+        "startAtIndex": 0,
+        "ligen": [
+          {
+            "seasonId": 2025,
+            "seasonName": "2025/2026",
+            "actualMatchDay": null,
+            "ligaId": 51961,
+            "liganame": "U10m Bezirksliga Oberpfalz",
+            "liganr": 1350,
+            "skName": "Bezirksliga",
+            "skNameSmall": null,
+            "skEbeneId": 1,
+            "skEbeneName": "Bezirk",
+            "akName": "U10",
+            "geschlechtId": 1,
+            "geschlecht": "männlich",
+            "verbandId": 2,
+            "verbandName": "Bayern",
+            "bezirknr": 4,
+            "bezirkName": "Oberpfalz",
+            "kreisnr": null,
+            "kreisname": null,
+            "statisticType": null,
+            "vorabliga": false,
+            "tableExists": true,
+            "crossTableExists": true
+          }
+        ],
+        "hasMoreData": false,
+        "size": 10
+      }
+    },
+    ...
+  }
+  ```
+  
+  **Wichtige Felder:**
+  - `ligaId`: Eindeutige Liga-ID (z.B. 51961)
+  - `liganame`: Vollständiger Name
+  - `geschlecht`: "männlich", "weiblich", "mix"
+  - `tableExists`: Hat diese Liga eine Tabelle?
+  - `crossTableExists`: Hat diese Liga eine Kreuztabelle?
+  - `hasMoreData`: Weitere Seiten verfügbar?
+  - `size`: Anzahl an Objekte, die in `ligen` ausgegeben wurde, kann bei eingeloggten Nutzern erhöht werden. 
+}

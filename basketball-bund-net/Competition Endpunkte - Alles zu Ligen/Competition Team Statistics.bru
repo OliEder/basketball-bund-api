@@ -1,0 +1,140 @@
+meta {
+  name: Competition Team Statistics
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseURL}}/rest/competition/teamstatistic/id/:ligaId
+  body: none
+  auth: none
+}
+
+params:path {
+  ligaId: 51962
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-18T01:34:21+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "prevSpieltag": null,
+      "selSpieltag": null,
+      "selSpielDatum": null,
+      "nextSpieltag": null,
+      "ligaData": {
+        "seasonId": 2025,
+        "seasonName": "2025/2026",
+        "actualMatchDay": {
+          "spieltag": 1,
+          "bezeichnung": "1. Spieltag"
+        },
+        "ligaId": 51938,
+        "liganame": "U18 männlich Bezirksoberliga",
+        "statisticType": 1,
+        ...
+      },
+      "spieltage": null,
+      "matches": [],
+      "tabelle": null,
+      "kreuztabelle": null,
+      "teamStatistik": {
+        "ligaData": null,
+        "stand": "2025-10-11",  // Letztes Update
+        "statisticEntries": [
+          {
+            "esz": 0.0,        // Einsatzzeit (meist nicht erfasst)
+            "pts": 174.0,      // Punkte gesamt
+            "twoPoints": {
+              "made": 56.0,     // Erfolgreiche 2-Punkte-Würfe
+              "attempted": 0.0, // Versuche (oft nicht erfasst)
+              "quota": null     // Quote (null wenn attempted = 0)
+            },
+            "threePoints": {
+              "made": 12.0,     // Erfolgreiche 3-Punkte-Würfe
+              "attempted": 0.0,
+              "quota": null
+            },
+            "wt": {            // Würfe Total (Field Goals)
+              "made": 68.0,     // made = twoPoints.made + threePoints.made
+              "attempted": 0.0,
+              "quota": null
+            },
+            "onePoints": {     // Freiwürfe
+              "made": 26.0,
+              "attempted": 49.0, // Oft erfasst!
+              "quota": 0.5306122448979592  // 26/49 = 53.06%
+            },
+            "ro": 0.0,         // Rebounds Offensiv (selten erfasst)
+            "rd": 0.0,         // Rebounds Defensiv (selten erfasst)
+            "rt": 0.0,         // Rebounds Total (selten erfasst)
+            "as": 0.0,         // Assists (selten erfasst)
+            "st": 0.0,         // Steals (selten erfasst)
+            "to": 0.0,         // Turnovers (selten erfasst)
+            "bs": 0.0,         // Blocks (selten erfasst)
+            "fouls": 17.0,     // Fouls (meist erfasst)
+            "eff": 219.0,      // Efficiency Rating
+            "tableTeamEntry": {
+              "rang": 1,
+              "team": {
+                "seasonTeamId": 432449,
+                "teamCompetitionId": 432449,
+                "teamPermanentId": 167036,
+                "teamname": "Regensburg Baskets",
+                "teamnameSmall": null,
+                "clubId": 546,
+                "verzicht": false
+              },
+              "anzspiele": 2,
+              "anzGewinnpunkte": 4,
+              "anzVerlustpunkte": 0,
+              "s": 2,          // Siege
+              "n": 0,          // Niederlagen
+              "koerbe": 174,   // Punkte erzielt
+              "gegenKoerbe": 126, // Punkte erhalten
+              "korbdiff": 48   // Differenz
+            }
+          }
+        ],
+        "bbl": false  // Ist Bundesliga?
+      }
+    },
+    "version": "11.42.2-b100829",
+    ...
+  }
+  ```
+  **Wichtige Hinweise:**
+  
+  1. **Erfassung variiert stark:**
+     - ✅ Immer erfasst: `pts`, `made` (Würfe), `fouls`, `eff`
+     - ✅ Meist erfasst: `onePoints.attempted` (Freiwurfversuche)
+     - ⚠️ Selten erfasst: `twoPoints.attempted`, `threePoints.attempted`
+     - ❌ Sehr selten: `ro`, `rd`, `rt`, `as`, `st`, `to`, `bs`
+  
+  2. **Quote-Berechnung:**
+     ```typescript
+     function calculateQuota(stats: WurfStats): number | null {
+       if (stats.attempted === 0) return null;
+       return stats.made / stats.attempted;
+     }
+     ```
+  
+  3. **Field Goals (wt):**
+     ```typescript
+     wt.made === twoPoints.made + threePoints.made
+     pts === (twoPoints.made * 2) + (threePoints.made * 3) + onePoints.made
+     ```
+  
+  4. **Efficiency Rating:**
+     - Formel variiert je nach Liga
+     - Meist: `(pts + rb + as + st + bs) - (missed_fg + missed_ft + to)`
+  
+  5. **Stand-Datum:**
+     - Zeigt letztes Update der Statistiken
+     - Format: `YYYY-MM-DD`
+     - Kann vom aktuellen Spieltag abweichen
+}

@@ -1,0 +1,142 @@
+meta {
+  name: Match Boxscore - Spieler-Statistiken
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseURL}}/rest/match/id/:matchId/boxscore
+  body: none
+  auth: none
+}
+
+params:path {
+  matchId: 2804083
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-16T14:04:37+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "ligaData": {...},
+      "matchId": 2803589,
+      "kickoffDate": "2025-10-04",
+      "kickoffTime": "14:45",
+      "homeTeam": {...},
+      "guestTeam": {...},
+      "result": "49:94",
+      "ergebnisbestaetigt": true,
+      "statisticType": 1,  // 0 = voll, 1 = reduziert (U8-U14)
+      "matchResult": {
+        "heimEndstand": 49,
+        "gastEndstand": 94,
+        "heimHalbzeitstand": 8,
+        "gastHalbzeitstand": 25,
+        "heimV1stand": 12,    // Viertel 1
+        "gastV1stand": 32,
+        "heimV3stand": 13,    // Viertel 3
+        "gastV3stand": 18,
+        "heimV4stand": 16,    // Viertel 4
+        "gastV4stand": 19,
+        "heimOt1stand": null, // Overtime
+        "gastOt1stand": null,
+        ...
+      },
+      "matchBoxscore": {
+        "homePlayerStats": [
+          {
+            "esz": 0.0,         // Einsatzzeit (meist 0 bei Minis)
+            "pts": 10.0,        // Punkte
+            "twoPoints": {
+              "made": 5.0,
+              "attempted": 0.0,
+              "quota": null
+            },
+            "threePoints": {
+              "made": 0.0,
+              "attempted": 0.0,
+              "quota": null
+            },
+            "wt": {             // Würfe Total
+              "made": 5.0,
+              "attempted": 0.0,
+              "quota": null
+            },
+            "onePoints": {      // Freiwürfe
+              "made": 5.0,
+              "attempted": 0.0,
+              "quota": null
+            },
+            "ro": 0.0,          // Rebounds Offensiv
+            "rd": 0.0,          // Rebounds Defensiv
+            "rt": 0.0,          // Rebounds Total
+            "as": 0.0,          // Assists
+            "st": 0.0,          // Steals
+            "to": 0.0,          // Turnovers
+            "bs": 0.0,          // Blocks
+            "fouls": 4.0,       // Fouls
+            "eff": 15.0,        // Efficiency
+            "player": {
+              "playerId": 4153626,
+              "no": "0",        // Rückennummer (oft "0" bei U8-U14)
+              "person": {
+                "id": 974727,
+                "vorname": "Paul",
+                "nachname": "Nguyen",
+                "anonym": false
+              },
+              "anonym": false
+            },
+            "isf": false        // Is Foreigner?
+          },
+          {
+            // ANONYMISIERTER SPIELER (U8-U14)
+            "pts": 2.0,
+            "player": {
+              "playerId": 0,
+              "no": "**",
+              "person": {
+                "id": 0,
+                "vorname": "***",
+                "nachname": "****",
+                "anonym": true
+              },
+              "anonym": true
+            },
+            ...
+          }
+        ],
+        "homeTeamStats": null,
+        "homeTotalStats": {
+          "pts": 49.0,
+          "twoPoints": {
+            "made": 22.0,
+            "attempted": 0.0,
+            "quota": null
+          },
+          ...
+          "fouls": 23.0,
+          "eff": 62.0
+        },
+        "guestPlayerStats": [...],
+        "guestTeamStats": null,
+        "guestTotalStats": {...}
+      },
+      "playByPlay": null,
+      "hasPlayByPlay": false
+    },
+    ...
+  }
+  ```
+  
+  **Wichtig:**
+  - `statisticType: 1` → Reduzierte Stats (U8-U14)
+  - `anonym: true` → Anonymisierte Spieler
+  - `attempted: 0.0` → Oft nicht erfasst bei Minis
+  - `quota: null` → Quote nicht berechnet
+  
+}

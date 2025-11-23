@@ -1,0 +1,597 @@
+{
+    "timestamp": "2025-10-13T18:27:44+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+        "wam": {
+            "token": "0",
+            "verbandIds": [
+                2
+            ],
+            "gebietIds": [
+                "4_"
+            ],
+            "ligatypIds": null,
+            "akgGeschlechtIds": null,
+            "altersklasseIds": null,
+            "spielklasseIds": null,
+            "sortBy": 1
+        },
+        "verbaende": [
+            {
+                "id": 100,
+                "label": "Bundesligen",
+                "hits": 0
+            },
+            {
+                "id": 29,
+                "label": "Deutsche Meisterschaften",
+                "hits": 0
+            },
+            {
+                "id": 40,
+                "label": "Deutscher Rollstuhlbasketball",
+                "hits": 0
+            },
+            {
+                "id": 30,
+                "label": "Regionalliga Nord",
+                "hits": 0
+            },
+            {
+                "id": 32,
+                "label": "Regionalliga Südost",
+                "hits": 0
+            },
+            {
+                "id": 31,
+                "label": "Regionalliga Südwest",
+                "hits": 0
+            },
+            {
+                "id": 33,
+                "label": "Regionalliga West",
+                "hits": 0
+            },
+            {
+                "id": 1,
+                "label": "Baden-Württemberg",
+                "hits": 0
+            },
+            {
+                "id": 2,
+                "label": "Bayern",
+                "hits": 26
+            },
+            {
+                "id": 3,
+                "label": "Berlin",
+                "hits": 0
+            },
+            {
+                "id": 14,
+                "label": "Brandenburg",
+                "hits": 0
+            },
+            {
+                "id": 4,
+                "label": "Bremen",
+                "hits": 0
+            },
+            {
+                "id": 5,
+                "label": "Hamburg",
+                "hits": 0
+            },
+            {
+                "id": 6,
+                "label": "Hessen",
+                "hits": 0
+            },
+            {
+                "id": 12,
+                "label": "Mecklenburg-Vorpommern",
+                "hits": 0
+            },
+            {
+                "id": 7,
+                "label": "Niedersachsen",
+                "hits": 0
+            },
+            {
+                "id": 11,
+                "label": "Nordrhein-Westfalen",
+                "hits": 0
+            },
+            {
+                "id": 8,
+                "label": "Rheinland-Pfalz",
+                "hits": 0
+            },
+            {
+                "id": 9,
+                "label": "Saarland",
+                "hits": 0
+            },
+            {
+                "id": 15,
+                "label": "Sachsen",
+                "hits": 0
+            },
+            {
+                "id": 13,
+                "label": "Sachsen-Anhalt",
+                "hits": 0
+            },
+            {
+                "id": 10,
+                "label": "Schleswig-Holstein",
+                "hits": 0
+            },
+            {
+                "id": 16,
+                "label": "Thüringen",
+                "hits": 0
+            }
+        ],
+        "gebiete": [
+            {
+                "id": "_",
+                "bezirk": null,
+                "kreis": null,
+                "hits": 60
+            },
+            {
+                "id": "1_",
+                "bezirk": "Oberbayern",
+                "kreis": null,
+                "hits": 20
+            },
+            {
+                "id": "1_1",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Mitte",
+                "hits": 40
+            },
+            {
+                "id": "1_2",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Nordost",
+                "hits": 7
+            },
+            {
+                "id": "1_3",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Südost",
+                "hits": 15
+            },
+            {
+                "id": "1_4",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis West",
+                "hits": 33
+            },
+            {
+                "id": "2_",
+                "bezirk": "Schwaben",
+                "kreis": null,
+                "hits": 41
+            },
+            {
+                "id": "3_",
+                "bezirk": "Mittelfranken",
+                "kreis": null,
+                "hits": 51
+            },
+            {
+                "id": "4_",
+                "bezirk": "Oberpfalz",
+                "kreis": null,
+                "hits": 26
+            },
+            {
+                "id": "5_",
+                "bezirk": "Oberfranken",
+                "kreis": null,
+                "hits": 51
+            },
+            {
+                "id": "6_",
+                "bezirk": "Unterfranken",
+                "kreis": null,
+                "hits": 30
+            }
+        ],
+        "ligatypen": [
+            {
+                "id": 1,
+                "label": "Ligaspielbetrieb",
+                "hits": 23
+            },
+            {
+                "id": 2,
+                "label": "Pokalrunde",
+                "hits": 2
+            },
+            {
+                "id": 3,
+                "label": "Auf-/Abstiegsspiele",
+                "hits": 0
+            },
+            {
+                "id": 4,
+                "label": "Play-Off-/Qualifikation",
+                "hits": 0
+            },
+            {
+                "id": 9,
+                "label": "Meisterschaft/Finals",
+                "hits": 0
+            },
+            {
+                "id": 10,
+                "label": "Liga ohne Spielplan",
+                "hits": 0
+            },
+            {
+                "id": 11,
+                "label": "Vorbereitungsliga",
+                "hits": 1
+            }
+        ],
+        "agkGeschlechtList": [
+            {
+                "id": "3_1",
+                "akg": "Senioren",
+                "geschlecht": "m",
+                "hits": 5
+            },
+            {
+                "id": "3_2",
+                "akg": "Senioren",
+                "geschlecht": "w",
+                "hits": 1
+            },
+            {
+                "id": "2_1",
+                "akg": "Jugend",
+                "geschlecht": "m",
+                "hits": 14
+            },
+            {
+                "id": "2_2",
+                "akg": "Jugend",
+                "geschlecht": "w",
+                "hits": 13
+            }
+        ],
+        "altersklassen": [
+            {
+                "id": 1,
+                "label": "Senioren",
+                "hits": 6
+            },
+            {
+                "id": 20,
+                "label": "U20",
+                "hits": 2
+            },
+            {
+                "id": 18,
+                "label": "U18",
+                "hits": 3
+            },
+            {
+                "id": 16,
+                "label": "U16",
+                "hits": 3
+            },
+            {
+                "id": 14,
+                "label": "U14",
+                "hits": 3
+            },
+            {
+                "id": 12,
+                "label": "U12",
+                "hits": 4
+            },
+            {
+                "id": 10,
+                "label": "U10",
+                "hits": 4
+            },
+            {
+                "id": 8,
+                "label": "U8",
+                "hits": 1
+            }
+        ],
+        "spielklassen": [
+            {
+                "id": 338,
+                "label": "Bezirksoberliga",
+                "hits": 14
+            },
+            {
+                "id": 339,
+                "label": "Bezirkspokal",
+                "hits": 2
+            },
+            {
+                "id": 320,
+                "label": "Bezirksliga",
+                "hits": 8
+            },
+            {
+                "id": 330,
+                "label": "Kreisliga",
+                "hits": 2
+            }
+        ],
+        "ligaListe": {
+            "startAtIndex": 0,
+            "ligen": [
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51347,
+                    "liganame": "Bezirksoberliga Herren 2025/26",
+                    "liganr": 24326,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 52140,
+                    "liganame": "U20 männlich Bezirksoberliga",
+                    "liganr": 1950,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U20",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 52147,
+                    "liganame": "U20 weiblich Bezirksoberliga",
+                    "liganr": 1960,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U20",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51938,
+                    "liganame": "U18 männlich Bezirksoberliga",
+                    "liganr": 1800,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U18",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51958,
+                    "liganame": "U18 weiblich Bezirksoberliga",
+                    "liganr": 1900,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U18",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51935,
+                    "liganame": "U16 männlich Bezirksoberliga",
+                    "liganr": 1600,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U16",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51937,
+                    "liganame": "U16 weiblich Bezirksoberliga",
+                    "liganr": 1740,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U16",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51931,
+                    "liganame": "U14 männlich Bezirksoberliga",
+                    "liganr": 1400,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U14",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51933,
+                    "liganame": "U14 weiblich Bezirksoberliga",
+                    "liganr": 1480,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U14",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51971,
+                    "liganame": "U12 weiblich Bezirksoberliga",
+                    "liganr": 1340,
+                    "skName": "Bezirksoberliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 1,
+                    "skEbeneName": "Bezirk",
+                    "akName": "U12",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": 4,
+                    "bezirkName": "Oberpfalz",
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                }
+            ],
+            "hasMoreData": true,
+            "size": 10
+        }
+    },
+    "version": "11.42.2-b100829",
+    "dateFormat": "yyyy-MM-dd",
+    "timeFormat": "yyyy-MM-dd'T'HH:mm:ssZ",
+    "timeFormatShort": "HH:mm",
+    "serverInstance": "www",
+    "username": null,
+    "appContext": "https://www.basketball-bund.net"
+}

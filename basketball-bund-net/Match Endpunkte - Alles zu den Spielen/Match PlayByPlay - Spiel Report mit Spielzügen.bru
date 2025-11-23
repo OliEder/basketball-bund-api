@@ -1,0 +1,90 @@
+meta {
+  name: Match PlayByPlay - Spiel Report mit Spielzügen
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseURL}}/rest/match/id/:matchId/playbyplay
+  body: none
+  auth: none
+}
+
+params:path {
+  matchId: 2804083
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-16T14:03:39+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "ligaData": {...},
+      "matchId": 2774284,
+      "matchDay": 35,
+      "matchNo": 406,
+      "kickoffDate": "2025-08-31",
+      "kickoffTime": "17:00",
+      "homeTeam": {...},
+      "guestTeam": {...},
+      "result": null,
+      "ergebnisbestaetigt": false,
+      "statisticType": 0,
+      "verzicht": false,
+      "abgesagt": false,
+      "matchResult": null,
+      "matchInfo": {
+        "topPerformances": [],
+        "spielfeld": {
+          "id": 108926,
+          "bezeichnung": "S-Arena Bernau",
+          "strasse": "Ladeburger Ch. 2",
+          "plz": "16321",
+          "ort": "Bernau"
+        },
+        "srList": [
+          {
+            "rolle": {
+              "id": 1,
+              "name": "1. Schiedsrichter",
+              "kurzname": "SR1"
+            },
+            "personData": {
+              "id": 23439,
+              "vorname": "Susanne",
+              "nachname": "Winking",
+              "anonym": false
+            }
+          },
+          {
+            "rolle": {
+              "id": 2,
+              "name": "2. Schiedsrichter",
+              "kurzname": "SR2"
+            },
+            "personData": {
+              "id": 0,
+              "vorname": "***",
+              "nachname": "****",
+              "anonym": true
+            }
+          }
+        ]
+      },
+      "matchBoxscore": null,
+      "playByPlay": null,
+      "hasPlayByPlay": false
+    },
+    ...
+  }
+  ```
+  
+  **Wichtige Felder:**
+  - `spielfeld`: Halle mit Adresse
+  - `srList`: Schiedsrichter (kann anonymisiert sein)
+  - `anonym: true` → Platzhalter `"***"` / `"****"`
+  
+}

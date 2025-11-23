@@ -1,0 +1,1513 @@
+{
+    "timestamp": "2025-10-13T18:05:55+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+        "wam": {
+            "token": "0",
+            "verbandIds": null,
+            "gebietIds": null,
+            "ligatypIds": null,
+            "akgGeschlechtIds": null,
+            "altersklasseIds": null,
+            "spielklasseIds": null,
+            "sortBy": 1
+        },
+        "verbaende": [
+            {
+                "id": 100,
+                "label": "Bundesligen",
+                "hits": 33
+            },
+            {
+                "id": 29,
+                "label": "Deutsche Meisterschaften",
+                "hits": 8
+            },
+            {
+                "id": 40,
+                "label": "Deutscher Rollstuhlbasketball",
+                "hits": 21
+            },
+            {
+                "id": 30,
+                "label": "Regionalliga Nord",
+                "hits": 8
+            },
+            {
+                "id": 32,
+                "label": "Regionalliga Südost",
+                "hits": 6
+            },
+            {
+                "id": 31,
+                "label": "Regionalliga Südwest",
+                "hits": 21
+            },
+            {
+                "id": 33,
+                "label": "Regionalliga West",
+                "hits": 9
+            },
+            {
+                "id": 1,
+                "label": "Baden-Württemberg",
+                "hits": 228
+            },
+            {
+                "id": 2,
+                "label": "Bayern",
+                "hits": 374
+            },
+            {
+                "id": 3,
+                "label": "Berlin",
+                "hits": 101
+            },
+            {
+                "id": 14,
+                "label": "Brandenburg",
+                "hits": 40
+            },
+            {
+                "id": 4,
+                "label": "Bremen",
+                "hits": 40
+            },
+            {
+                "id": 5,
+                "label": "Hamburg",
+                "hits": 71
+            },
+            {
+                "id": 6,
+                "label": "Hessen",
+                "hits": 125
+            },
+            {
+                "id": 12,
+                "label": "Mecklenburg-Vorpommern",
+                "hits": 28
+            },
+            {
+                "id": 7,
+                "label": "Niedersachsen",
+                "hits": 203
+            },
+            {
+                "id": 11,
+                "label": "Nordrhein-Westfalen",
+                "hits": 342
+            },
+            {
+                "id": 8,
+                "label": "Rheinland-Pfalz",
+                "hits": 76
+            },
+            {
+                "id": 9,
+                "label": "Saarland",
+                "hits": 25
+            },
+            {
+                "id": 15,
+                "label": "Sachsen",
+                "hits": 106
+            },
+            {
+                "id": 13,
+                "label": "Sachsen-Anhalt",
+                "hits": 80
+            },
+            {
+                "id": 10,
+                "label": "Schleswig-Holstein",
+                "hits": 47
+            },
+            {
+                "id": 16,
+                "label": "Thüringen",
+                "hits": 53
+            }
+        ],
+        "gebiete": [
+            {
+                "id": "_",
+                "bezirk": null,
+                "kreis": null,
+                "hits": 912
+            },
+            {
+                "id": "97_",
+                "bezirk": "Nord",
+                "kreis": null,
+                "hits": 7
+            },
+            {
+                "id": "30_",
+                "bezirk": "Rhein/Neckar",
+                "kreis": null,
+                "hits": 27
+            },
+            {
+                "id": "31_",
+                "bezirk": "SchwarzwaldOberrhein",
+                "kreis": null,
+                "hits": 40
+            },
+            {
+                "id": "32_",
+                "bezirk": "Nordwürttemberg",
+                "kreis": null,
+                "hits": 66
+            },
+            {
+                "id": "33_",
+                "bezirk": "Alb/Bodensee",
+                "kreis": null,
+                "hits": 67
+            },
+            {
+                "id": "1_",
+                "bezirk": "Oberbayern",
+                "kreis": null,
+                "hits": 20
+            },
+            {
+                "id": "1_1",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Mitte",
+                "hits": 40
+            },
+            {
+                "id": "1_2",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Nordost",
+                "hits": 7
+            },
+            {
+                "id": "1_3",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Südost",
+                "hits": 15
+            },
+            {
+                "id": "1_4",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis West",
+                "hits": 33
+            },
+            {
+                "id": "2_",
+                "bezirk": "Schwaben",
+                "kreis": null,
+                "hits": 41
+            },
+            {
+                "id": "3_",
+                "bezirk": "Mittelfranken",
+                "kreis": null,
+                "hits": 51
+            },
+            {
+                "id": "4_",
+                "bezirk": "Oberpfalz",
+                "kreis": null,
+                "hits": 26
+            },
+            {
+                "id": "5_",
+                "bezirk": "Oberfranken",
+                "kreis": null,
+                "hits": 51
+            },
+            {
+                "id": "6_",
+                "bezirk": "Unterfranken",
+                "kreis": null,
+                "hits": 30
+            },
+            {
+                "id": "102_",
+                "bezirk": "Region Lüneburg",
+                "kreis": null,
+                "hits": 58
+            },
+            {
+                "id": "22_",
+                "bezirk": "Gießen",
+                "kreis": null,
+                "hits": 17
+            },
+            {
+                "id": "28_",
+                "bezirk": "Darmstadt",
+                "kreis": null,
+                "hits": 35
+            },
+            {
+                "id": "29_",
+                "bezirk": "Frankfurt",
+                "kreis": null,
+                "hits": 38
+            },
+            {
+                "id": "34_",
+                "bezirk": "Kassel",
+                "kreis": null,
+                "hits": 9
+            },
+            {
+                "id": "98_",
+                "bezirk": "Region Braunschweig",
+                "kreis": null,
+                "hits": 27
+            },
+            {
+                "id": "99_",
+                "bezirk": "Region Bremen",
+                "kreis": null,
+                "hits": 6
+            },
+            {
+                "id": "100_",
+                "bezirk": "Region Göttingen",
+                "kreis": null,
+                "hits": 10
+            },
+            {
+                "id": "101_",
+                "bezirk": "Region Hannover",
+                "kreis": null,
+                "hits": 31
+            },
+            {
+                "id": "103_",
+                "bezirk": "Region Oldenburg",
+                "kreis": null,
+                "hits": 26
+            },
+            {
+                "id": "104_",
+                "bezirk": "Region Osnabrück",
+                "kreis": null,
+                "hits": 29
+            },
+            {
+                "id": "7_",
+                "bezirk": "Rheinhessen",
+                "kreis": null,
+                "hits": 11
+            },
+            {
+                "id": "8_",
+                "bezirk": "Pfalz",
+                "kreis": null,
+                "hits": 22
+            },
+            {
+                "id": "60_",
+                "bezirk": "Rheinland",
+                "kreis": null,
+                "hits": 1
+            },
+            {
+                "id": "60_41",
+                "bezirk": "Rheinland",
+                "kreis": "Koblenz",
+                "hits": 16
+            },
+            {
+                "id": "60_42",
+                "bezirk": "Rheinland",
+                "kreis": "Trier",
+                "hits": 11
+            },
+            {
+                "id": "11_",
+                "bezirk": "Chemnitz",
+                "kreis": null,
+                "hits": 7
+            },
+            {
+                "id": "12_",
+                "bezirk": "Dresden",
+                "kreis": null,
+                "hits": 26
+            },
+            {
+                "id": "13_",
+                "bezirk": "Leipzig",
+                "kreis": null,
+                "hits": 14
+            },
+            {
+                "id": "84_",
+                "bezirk": "Kreis Ennepe-Ruhr",
+                "kreis": null,
+                "hits": 4
+            },
+            {
+                "id": "70_",
+                "bezirk": "Kreis Aachen",
+                "kreis": null,
+                "hits": 8
+            },
+            {
+                "id": "71_",
+                "bezirk": "Kreis Erft",
+                "kreis": null,
+                "hits": 16
+            },
+            {
+                "id": "72_",
+                "bezirk": "Kreis Bonn",
+                "kreis": null,
+                "hits": 16
+            },
+            {
+                "id": "73_",
+                "bezirk": "Kreis Köln",
+                "kreis": null,
+                "hits": 16
+            },
+            {
+                "id": "74_",
+                "bezirk": "Rhein. Berg. Kreis",
+                "kreis": null,
+                "hits": 6
+            },
+            {
+                "id": "75_",
+                "bezirk": "Kreis Düsseldorf",
+                "kreis": null,
+                "hits": 25
+            },
+            {
+                "id": "76_",
+                "bezirk": "Kreis Niers",
+                "kreis": null,
+                "hits": 6
+            },
+            {
+                "id": "77_",
+                "bezirk": "Kreis Niederrhein",
+                "kreis": null,
+                "hits": 7
+            },
+            {
+                "id": "78_",
+                "bezirk": "Kreis Essen",
+                "kreis": null,
+                "hits": 6
+            },
+            {
+                "id": "79_",
+                "bezirk": "Kreis Mettmann",
+                "kreis": null,
+                "hits": 6
+            },
+            {
+                "id": "80_",
+                "bezirk": "Kreis Wuppertal",
+                "kreis": null,
+                "hits": 15
+            },
+            {
+                "id": "81_",
+                "bezirk": "Kreis Bochum ",
+                "kreis": null,
+                "hits": 5
+            },
+            {
+                "id": "82_",
+                "bezirk": "Kreis Dortmund",
+                "kreis": null,
+                "hits": 9
+            },
+            {
+                "id": "83_",
+                "bezirk": "Kreis Unna/Soest",
+                "kreis": null,
+                "hits": 6
+            },
+            {
+                "id": "85_",
+                "bezirk": "Kreis Hagen",
+                "kreis": null,
+                "hits": 11
+            },
+            {
+                "id": "86_",
+                "bezirk": "Märkischer Kreis ",
+                "kreis": null,
+                "hits": 1
+            },
+            {
+                "id": "88_",
+                "bezirk": "Kreis Münster",
+                "kreis": null,
+                "hits": 11
+            },
+            {
+                "id": "89_",
+                "bezirk": "Kreis Emscher-Lippe",
+                "kreis": null,
+                "hits": 31
+            },
+            {
+                "id": "90_",
+                "bezirk": "Kreis Ostwestfalen ",
+                "kreis": null,
+                "hits": 8
+            },
+            {
+                "id": "91_",
+                "bezirk": "Kreis Paderborn",
+                "kreis": null,
+                "hits": 5
+            }
+        ],
+        "ligatypen": [
+            {
+                "id": 1,
+                "label": "Ligaspielbetrieb",
+                "hits": 1756
+            },
+            {
+                "id": 2,
+                "label": "Pokalrunde",
+                "hits": 91
+            },
+            {
+                "id": 3,
+                "label": "Auf-/Abstiegsspiele",
+                "hits": 100
+            },
+            {
+                "id": 4,
+                "label": "Play-Off-/Qualifikation",
+                "hits": 10
+            },
+            {
+                "id": 9,
+                "label": "Meisterschaft/Finals",
+                "hits": 57
+            },
+            {
+                "id": 10,
+                "label": "Liga ohne Spielplan",
+                "hits": 0
+            },
+            {
+                "id": 11,
+                "label": "Vorbereitungsliga",
+                "hits": 31
+            }
+        ],
+        "agkGeschlechtList": [
+            {
+                "id": "3_1",
+                "akg": "Senioren",
+                "geschlecht": "m",
+                "hits": 460
+            },
+            {
+                "id": "3_2",
+                "akg": "Senioren",
+                "geschlecht": "w",
+                "hits": 202
+            },
+            {
+                "id": "2_1",
+                "akg": "Jugend",
+                "geschlecht": "m",
+                "hits": 1087
+            },
+            {
+                "id": "2_2",
+                "akg": "Jugend",
+                "geschlecht": "w",
+                "hits": 693
+            }
+        ],
+        "altersklassen": [
+            {
+                "id": 1,
+                "label": "Senioren",
+                "hits": 571
+            },
+            {
+                "id": 19,
+                "label": "U19",
+                "hits": 10
+            },
+            {
+                "id": 18,
+                "label": "U18",
+                "hits": 204
+            },
+            {
+                "id": 16,
+                "label": "U16",
+                "hits": 309
+            },
+            {
+                "id": 15,
+                "label": "U15",
+                "hits": 18
+            },
+            {
+                "id": 32,
+                "label": "Ü35",
+                "hits": 25
+            },
+            {
+                "id": 40,
+                "label": "Ü40",
+                "hits": 23
+            },
+            {
+                "id": 14,
+                "label": "U14",
+                "hits": 320
+            },
+            {
+                "id": 20,
+                "label": "U20",
+                "hits": 31
+            },
+            {
+                "id": 12,
+                "label": "U12",
+                "hits": 299
+            },
+            {
+                "id": 10,
+                "label": "U10",
+                "hits": 163
+            },
+            {
+                "id": 8,
+                "label": "U8",
+                "hits": 18
+            },
+            {
+                "id": 30,
+                "label": "Ü30",
+                "hits": 2
+            },
+            {
+                "id": 45,
+                "label": "Ü45",
+                "hits": 3
+            },
+            {
+                "id": 50,
+                "label": "Ü50",
+                "hits": 1
+            },
+            {
+                "id": 55,
+                "label": "Ü55",
+                "hits": 1
+            },
+            {
+                "id": 11,
+                "label": "U11",
+                "hits": 17
+            },
+            {
+                "id": 9,
+                "label": "U9",
+                "hits": 11
+            },
+            {
+                "id": 17,
+                "label": "U17",
+                "hits": 6
+            },
+            {
+                "id": 13,
+                "label": "U13",
+                "hits": 13
+            }
+        ],
+        "spielklassen": [
+            {
+                "id": 100,
+                "label": "1. Bundesliga",
+                "hits": 2
+            },
+            {
+                "id": 101,
+                "label": "2. Bundesliga",
+                "hits": 5
+            },
+            {
+                "id": 102,
+                "label": "Jugend-Bundesliga",
+                "hits": 20
+            },
+            {
+                "id": 103,
+                "label": "DBBL-Pokal",
+                "hits": 3
+            },
+            {
+                "id": 104,
+                "label": "BBL-Pokal",
+                "hits": 2
+            },
+            {
+                "id": 2013,
+                "label": "Deutsche Meisterschaft ",
+                "hits": 9
+            },
+            {
+                "id": 2808,
+                "label": "Bundesliga",
+                "hits": 1
+            },
+            {
+                "id": 2813,
+                "label": "1. Bundesliga",
+                "hits": 1
+            },
+            {
+                "id": 2814,
+                "label": "2. Bundesliga",
+                "hits": 2
+            },
+            {
+                "id": 2809,
+                "label": "Regionalliga",
+                "hits": 3
+            },
+            {
+                "id": 2810,
+                "label": "Oberliga",
+                "hits": 5
+            },
+            {
+                "id": 2811,
+                "label": "Landesliga",
+                "hits": 4
+            },
+            {
+                "id": 2812,
+                "label": "Pokal",
+                "hits": 5
+            },
+            {
+                "id": 1805,
+                "label": "1.Regionalliga",
+                "hits": 16
+            },
+            {
+                "id": 1806,
+                "label": "2.Regionalliga",
+                "hits": 20
+            },
+            {
+                "id": 2802,
+                "label": "1. Regionalliga",
+                "hits": 2
+            },
+            {
+                "id": 2804,
+                "label": "1. Regionalliga",
+                "hits": 8
+            },
+            {
+                "id": 2803,
+                "label": "2. Regionalliga",
+                "hits": 2
+            },
+            {
+                "id": 2805,
+                "label": "2. Regionalliga",
+                "hits": 6
+            },
+            {
+                "id": 1905,
+                "label": "Regionalliga",
+                "hits": 7
+            },
+            {
+                "id": 2010,
+                "label": "Regionalliga",
+                "hits": 7
+            },
+            {
+                "id": 2011,
+                "label": "1. Regionalliga",
+                "hits": 8
+            },
+            {
+                "id": 2012,
+                "label": "2. Regionalliga",
+                "hits": 8
+            },
+            {
+                "id": 1131,
+                "label": "1.Regionalliga",
+                "hits": 6
+            },
+            {
+                "id": 1132,
+                "label": "2.Regionalliga",
+                "hits": 7
+            },
+            {
+                "id": 1134,
+                "label": "Bestenspiele",
+                "hits": 8
+            },
+            {
+                "id": 751,
+                "label": "offene Runde",
+                "hits": 26
+            },
+            {
+                "id": 105,
+                "label": "Regionalliga",
+                "hits": 7
+            },
+            {
+                "id": 115,
+                "label": "Oberliga",
+                "hits": 17
+            },
+            {
+                "id": 120,
+                "label": "Landesliga",
+                "hits": 61
+            },
+            {
+                "id": 110,
+                "label": "Bezirksliga",
+                "hits": 86
+            },
+            {
+                "id": 125,
+                "label": "Kreisliga",
+                "hits": 6
+            },
+            {
+                "id": 127,
+                "label": "Kreisliga A",
+                "hits": 29
+            },
+            {
+                "id": 128,
+                "label": "Kreisliga B",
+                "hits": 10
+            },
+            {
+                "id": 130,
+                "label": "keine",
+                "hits": 8
+            },
+            {
+                "id": 315,
+                "label": "Bayernliga",
+                "hits": 19
+            },
+            {
+                "id": 336,
+                "label": "Bayernpokal",
+                "hits": 2
+            },
+            {
+                "id": 337,
+                "label": "Bay. Meisterschaft",
+                "hits": 24
+            },
+            {
+                "id": 317,
+                "label": "Landesliga",
+                "hits": 8
+            },
+            {
+                "id": 338,
+                "label": "Bezirksoberliga",
+                "hits": 84
+            },
+            {
+                "id": 339,
+                "label": "Bezirkspokal",
+                "hits": 10
+            },
+            {
+                "id": 340,
+                "label": "Bezirksmeisterschaft",
+                "hits": 2
+            },
+            {
+                "id": 320,
+                "label": "Bezirksliga",
+                "hits": 58
+            },
+            {
+                "id": 325,
+                "label": "Bezirksklasse",
+                "hits": 50
+            },
+            {
+                "id": 330,
+                "label": "Kreisliga",
+                "hits": 70
+            },
+            {
+                "id": 335,
+                "label": "Kreisklasse",
+                "hits": 41
+            },
+            {
+                "id": 205,
+                "label": "Oberliga",
+                "hits": 17
+            },
+            {
+                "id": 1302,
+                "label": "Oberliga",
+                "hits": 78
+            },
+            {
+                "id": 210,
+                "label": "Landesliga",
+                "hits": 23
+            },
+            {
+                "id": 215,
+                "label": "Bezirksliga",
+                "hits": 17
+            },
+            {
+                "id": 220,
+                "label": "Kreisliga",
+                "hits": 17
+            },
+            {
+                "id": 225,
+                "label": "Mini-F",
+                "hits": 6
+            },
+            {
+                "id": 230,
+                "label": "Mini-A",
+                "hits": 11
+            },
+            {
+                "id": 232,
+                "label": "Mini-N",
+                "hits": 2
+            },
+            {
+                "id": 1410,
+                "label": "Oberliga",
+                "hits": 11
+            },
+            {
+                "id": 1420,
+                "label": "Landesliga",
+                "hits": 4
+            },
+            {
+                "id": 1430,
+                "label": "Bezirksliga",
+                "hits": 3
+            },
+            {
+                "id": 1440,
+                "label": "Bestenliga",
+                "hits": 5
+            },
+            {
+                "id": 1450,
+                "label": "Bestenklasse",
+                "hits": 1
+            },
+            {
+                "id": 1470,
+                "label": "Pokal",
+                "hits": 2
+            },
+            {
+                "id": 710,
+                "label": "Oberliga",
+                "hits": 6
+            },
+            {
+                "id": 711,
+                "label": "Landesliga",
+                "hits": 33
+            },
+            {
+                "id": 722,
+                "label": "Regionsliga",
+                "hits": 108
+            },
+            {
+                "id": 723,
+                "label": "Regionsklasse",
+                "hits": 39
+            },
+            {
+                "id": 515,
+                "label": "Oberliga",
+                "hits": 4
+            },
+            {
+                "id": 516,
+                "label": "Stadtliga",
+                "hits": 3
+            },
+            {
+                "id": 520,
+                "label": "Bezirksliga",
+                "hits": 5
+            },
+            {
+                "id": 530,
+                "label": "Kreisliga",
+                "hits": 5
+            },
+            {
+                "id": 560,
+                "label": "Leistungsrunde",
+                "hits": 6
+            },
+            {
+                "id": 570,
+                "label": "Offene Runde A",
+                "hits": 17
+            },
+            {
+                "id": 580,
+                "label": "Offene Runde B",
+                "hits": 18
+            },
+            {
+                "id": 2807,
+                "label": "Offene Runde C",
+                "hits": 9
+            },
+            {
+                "id": 610,
+                "label": "Oberliga",
+                "hits": 11
+            },
+            {
+                "id": 615,
+                "label": "Landesliga",
+                "hits": 16
+            },
+            {
+                "id": 620,
+                "label": "Bezirksliga",
+                "hits": 48
+            },
+            {
+                "id": 650,
+                "label": "Kreisliga",
+                "hits": 34
+            },
+            {
+                "id": 651,
+                "label": "Kreisliga A",
+                "hits": 5
+            },
+            {
+                "id": 652,
+                "label": "Kreisliga B",
+                "hits": 5
+            },
+            {
+                "id": 653,
+                "label": "Kreisliga C",
+                "hits": 6
+            },
+            {
+                "id": 1202,
+                "label": "Oberliga",
+                "hits": 18
+            },
+            {
+                "id": 1203,
+                "label": "Landesliga",
+                "hits": 7
+            },
+            {
+                "id": 730,
+                "label": "Kreisliga",
+                "hits": 7
+            },
+            {
+                "id": 752,
+                "label": "Kreisklasse",
+                "hits": 2
+            },
+            {
+                "id": 712,
+                "label": "Landesmeisterschaften",
+                "hits": 7
+            },
+            {
+                "id": 715,
+                "label": "Pokal",
+                "hits": 11
+            },
+            {
+                "id": 402,
+                "label": "Oberliga",
+                "hits": 12
+            },
+            {
+                "id": 403,
+                "label": "Landesliga",
+                "hits": 10
+            },
+            {
+                "id": 404,
+                "label": "Bezirksliga",
+                "hits": 9
+            },
+            {
+                "id": 405,
+                "label": "A-Klasse",
+                "hits": 5
+            },
+            {
+                "id": 406,
+                "label": "B-Klasse",
+                "hits": 1
+            },
+            {
+                "id": 407,
+                "label": "Bezirks-Leistungsklasse",
+                "hits": 3
+            },
+            {
+                "id": 408,
+                "label": "Bezirks-Klasse",
+                "hits": 42
+            },
+            {
+                "id": 916,
+                "label": "Landesliga",
+                "hits": 9
+            },
+            {
+                "id": 920,
+                "label": "Bezirksliga",
+                "hits": 4
+            },
+            {
+                "id": 930,
+                "label": "Kreisliga",
+                "hits": 4
+            },
+            {
+                "id": 931,
+                "label": "Kreisliga A",
+                "hits": 2
+            },
+            {
+                "id": 1502,
+                "label": "Oberliga",
+                "hits": 2
+            },
+            {
+                "id": 1503,
+                "label": "Landesliga",
+                "hits": 15
+            },
+            {
+                "id": 1303,
+                "label": "Landesliga",
+                "hits": 18
+            },
+            {
+                "id": 1560,
+                "label": "Bezirksoberliga",
+                "hits": 8
+            },
+            {
+                "id": 1525,
+                "label": "Bezirksliga",
+                "hits": 33
+            },
+            {
+                "id": 1320,
+                "label": "Bezirksliga",
+                "hits": 32
+            },
+            {
+                "id": 1526,
+                "label": "Bezirksklasse",
+                "hits": 2
+            },
+            {
+                "id": 1529,
+                "label": "Bezirkspokal",
+                "hits": 4
+            },
+            {
+                "id": 1555,
+                "label": "Sachsenmeisterschaft",
+                "hits": 15
+            },
+            {
+                "id": 1350,
+                "label": "Seniorenliga",
+                "hits": 4
+            },
+            {
+                "id": 1352,
+                "label": "Pokal",
+                "hits": 3
+            },
+            {
+                "id": 1010,
+                "label": "Oberliga",
+                "hits": 22
+            },
+            {
+                "id": 1020,
+                "label": "Landesliga",
+                "hits": 7
+            },
+            {
+                "id": 1030,
+                "label": "Bezirksliga",
+                "hits": 12
+            },
+            {
+                "id": 1040,
+                "label": "Kreisliga",
+                "hits": 2
+            },
+            {
+                "id": 1035,
+                "label": "Kreisliga",
+                "hits": 182
+            },
+            {
+                "id": 1602,
+                "label": "Oberliga",
+                "hits": 10
+            },
+            {
+                "id": 1603,
+                "label": "Landesliga",
+                "hits": 13
+            },
+            {
+                "id": 1133,
+                "label": "WBV-Pokal",
+                "hits": 4
+            },
+            {
+                "id": 1115,
+                "label": "Regionalliga",
+                "hits": 8
+            },
+            {
+                "id": 1120,
+                "label": "Oberliga",
+                "hits": 40
+            },
+            {
+                "id": 1125,
+                "label": "Landesliga",
+                "hits": 32
+            },
+            {
+                "id": 1130,
+                "label": "Bezirksliga",
+                "hits": 37
+            },
+            {
+                "id": 1136,
+                "label": "2.Kreisliga",
+                "hits": 8
+            },
+            {
+                "id": 1137,
+                "label": "Kreisklasse",
+                "hits": 2
+            },
+            {
+                "id": 1138,
+                "label": "Pokal",
+                "hits": 17
+            }
+        ],
+        "ligaListe": {
+            "startAtIndex": 0,
+            "ligen": [
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51520,
+                    "liganame": "1. Bundesliga (easyCredit BBL)",
+                    "liganr": 1,
+                    "skName": "1. Bundesliga",
+                    "skNameSmall": "BL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51542,
+                    "liganame": "1. Bundesliga (Toyota DBBL)",
+                    "liganr": 30,
+                    "skName": "1. Bundesliga",
+                    "skNameSmall": "BL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51529,
+                    "liganame": "Herren ProA",
+                    "liganr": 10,
+                    "skName": "2. Bundesliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51534,
+                    "liganame": "Herren ProB Nord",
+                    "liganr": 20,
+                    "skName": "2. Bundesliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51536,
+                    "liganame": "Herren ProB Süd",
+                    "liganr": 22,
+                    "skName": "2. Bundesliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51552,
+                    "liganame": "2. DBBL Nord",
+                    "liganr": 40,
+                    "skName": "2. Bundesliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51555,
+                    "liganame": "2. DBBL Süd",
+                    "liganr": 43,
+                    "skName": "2. Bundesliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51019,
+                    "liganame": "NBBL A - Gruppe Nord",
+                    "liganr": 1715,
+                    "skName": "Jugend-Bundesliga",
+                    "skNameSmall": "NBBL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "U19",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51020,
+                    "liganame": "NBBL A - Gruppe Süd",
+                    "liganr": 1716,
+                    "skName": "Jugend-Bundesliga",
+                    "skNameSmall": "NBBL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "U19",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 51021,
+                    "liganame": "NBBL B - Gruppe Nord",
+                    "liganr": 1717,
+                    "skName": "Jugend-Bundesliga",
+                    "skNameSmall": "NBBL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "U19",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 100,
+                    "verbandName": "Bundesligen",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                }
+            ],
+            "hasMoreData": true,
+            "size": 10
+        }
+    },
+    "version": "11.42.2-b100829",
+    "dateFormat": "yyyy-MM-dd",
+    "timeFormat": "yyyy-MM-dd'T'HH:mm:ssZ",
+    "timeFormatShort": "HH:mm",
+    "serverInstance": "www",
+    "username": null,
+    "appContext": "https://www.basketball-bund.net"
+}

@@ -1,0 +1,102 @@
+meta {
+  name: WAM Data - Liga-Filter-Optionen
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseURL}}/rest/wam/data
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "token":{{token}},
+    "verbandIds": [{{verbaendeIds}}],
+    "gebietIds": [{{gebieteIds}}],
+    "ligatypIds": [{{ligatypenIds}}],
+    "akgGeschlechtIds": [{{agkGeschlechtListIds}}],
+    "altersklasseIds": [{{altersklassenIds}}],
+    "spielklasseIds": [{{spielklassenIds}}]
+  }
+}
+
+vars:pre-request {
+  token: 0
+  verbaendeIds: 
+  ligatypenIds: 
+  agkGeschlechtListIds: 
+  altersklassenIds: 
+  spielklassenIds: 
+  gebieteIds: 
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-17T17:12:38+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "wam": {
+        "token": "0",
+        "verbandIds": [100],
+        "gebietIds": [],
+        ...
+      },
+      "verbaende": [
+        {
+          "id": 2,
+          "label": "Bayern",
+          "hits": 374
+        }
+      ],
+      "gebiete": [
+        {
+          "id": "4_",
+          "bezirk": null,
+          "kreis": null,
+          "hits": 120
+        }
+      ],
+      "altersklassen": [
+        {
+          "id": 10,
+          "label": "U10",
+          "hits": 45
+        },
+        {
+          "id": 12,
+          "label": "U12",
+          "hits": 38
+        }
+      ],
+      "spielklassen": [
+        {
+          "id": 320,
+          "label": "Bezirksliga",
+          "hits": 25
+        }
+      ],
+      "ligaListe": {
+        "startAtIndex": 0,
+        "ligen": [...],  // Erste 10 Ligen
+        "hasMoreData": true,
+        "size": 10
+      }
+    },
+    "version": "11.42.2-b100829",
+    ...
+  }
+  ```
+  
+  **Wichtige Felder:**
+  - `verbaende`: Liste aller Landesverbände mit Hit-Count
+  - `gebiete`: Bezirke/Kreise (Bayern: `1_` bis `6_`)
+  - `altersklassen`: U8 bis U20 + Senior
+  - `spielklassen`: Bezirksliga, Bezirksklasse, etc.
+  - `ligaListe`: Vorschau der ersten 10 Ligen
+  - `hits`: Anzahl an Ligen in dieser Kategorie mit gewählter Filter-Option
+}

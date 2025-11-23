@@ -1,0 +1,20 @@
+meta {
+  name: Team Logo
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseURL}}/media/team/:teamPermanentId/logo
+  body: none
+  auth: inherit
+}
+
+params:path {
+  teamPermanentId: 167881
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,21 @@
+meta {
+  name: Team Matches - Team-Spiele
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}/rest/team/id/:teamPermanentId/matches
+  body: none
+  auth: none
+}
+
+params:path {
+  teamPermanentId: 167887
+}
+
+docs {
+  **Wichtig:** `teamPermanentId` verwenden (nicht seasonTeamId)!
+  
+  **Response:** Array aller Spiele des Teams (vergangene + zukünftige)
+}

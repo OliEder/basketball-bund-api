@@ -1,0 +1,90 @@
+meta {
+  name: Competition Spielplan - Spielplan
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseURL}}/rest/competition/spielplan/id/:ligaId
+  body: none
+  auth: none
+}
+
+params:path {
+  ligaId: 51961
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-17T18:09:02+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "prevSpieltag": null,
+      "selSpieltag": null,
+      "selSpielDatum": null,
+      "nextSpieltag": null,
+      "ligaData": {
+        "seasonId": 2025,
+        "seasonName": "2025/2026",
+        "actualMatchDay": {
+          "spieltag": 8,
+          "bezeichnung": "8. Spieltag"
+        },
+        "ligaId": 51933,
+        "liganame": "U14 weiblich Bezirksoberliga",
+        ...
+      },
+      "spieltage": null,
+      "matches": [
+        {
+          "ligaData": null,
+          "matchId": 2803682,
+          "matchDay": 6,
+          "matchNo": 1496,
+          "kickoffDate": "2025-10-05",    // YYYY-MM-DD
+          "kickoffTime": "18:00",         // HH:MM
+          "homeTeam": {
+            "seasonTeamId": 432429,
+            "teamCompetitionId": 432429,
+            "teamPermanentId": 186126,
+            "teamname": "FC Tegernheim",
+            "teamnameSmall": "TEG1",
+            "clubId": 428,
+            "verzicht": false
+          },
+          "guestTeam": {
+            "seasonTeamId": 432428,
+            "teamCompetitionId": 432428,
+            "teamPermanentId": 194456,
+            "teamname": "Regensburg Baskets",
+            "teamnameSmall": null,
+            "clubId": 546,
+            "verzicht": false
+          },
+          "result": "36:62",              // String! "heim:gast"
+          "ergebnisbestaetigt": false,
+          "statisticType": null,
+          "verzicht": false,
+          "abgesagt": false,
+          "matchResult": null,
+          "matchInfo": null,
+          "matchBoxscore": null,
+          "playByPlay": null,
+          "hasPlayByPlay": null
+        }
+      ]
+    },
+    ...
+  }
+  ```
+  
+  **Wichtige Felder:**
+  - `kickoffDate` + `kickoffTime`: String-Kombination (nicht ISO!)
+  - `result`: String im Format "heim:gast" (z.B. "36:62")
+  - `verzicht`: Team hat aufgegeben?
+  - `abgesagt`: Spiel wurde abgesagt?
+  - `ergebnisbestaetigt`: Ergebnis bestätigt?
+}

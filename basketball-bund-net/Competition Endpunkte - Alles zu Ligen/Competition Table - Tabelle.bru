@@ -1,0 +1,78 @@
+meta {
+  name: Competition Table - Tabelle
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseURL}}/rest/competition/table/id/:ligaId
+  body: none
+  auth: none
+}
+
+params:path {
+  ligaId: 47756
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-17T17:16:52+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+      "prevSpieltag": null,
+      "selSpieltag": null,
+      "selSpielDatum": null,
+      "nextSpieltag": null,
+      "ligaData": {
+        "seasonId": 2025,
+        "seasonName": "2025/2026",
+        "actualMatchDay": {
+          "spieltag": 5,
+          "bezeichnung": "5. Spieltag"
+        },
+        "ligaId": 51536,
+        "liganame": "Herren ProB Süd",
+        ...
+      },
+      "spieltage": null,
+      "matches": [],
+      "tabelle": {
+        "ligaData": null,
+        "entries": [
+          {
+            "rang": 1, // Platzierung
+            "team": {
+              "seasonTeamId": 429535,
+              "teamCompetitionId": 429535,
+              "teamPermanentId": 311275,
+              "teamname": "BBC Coburg",
+              "teamnameSmall": "CB",
+              "clubId": 4575,
+              "verzicht": false
+            },
+            "anzspiele": 4,
+            "anzGewinnpunkte": 8,
+            "anzVerlustpunkte": 0,
+            "s": 4,        // Siege
+            "n": 0,        // Niederlagen
+            "koerbe": 362, // Erzielte Punkte
+            "gegenKoerbe": 271, // Erhaltene Punkte
+            "korbdiff": 91      // Differenz
+          }
+        ],
+        "bbl": false
+      },
+      "kreuztabelle": null,
+      "teamStatistik": null
+    },
+    ...
+  }
+  ```
+  
+  **Wichtig:**
+  - `teamPermanentId`: Bleibt über Saisons gleich
+  - `seasonTeamId` / `teamCompetitionId`: Ändert sich pro Saison
+}

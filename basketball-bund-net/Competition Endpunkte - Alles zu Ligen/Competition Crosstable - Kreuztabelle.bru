@@ -1,0 +1,70 @@
+meta {
+  name: Competition Crosstable - Kreuztabelle
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseURL}}/rest/competition/crosstable/id/:ligaId
+  body: none
+  auth: none
+}
+
+params:path {
+  ligaId: 51938
+}
+
+docs {
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-29T13:30:31+0100",
+    "status": "0",
+    "message": "",
+    "data": {
+      "ligaData": {...},
+      "spieltage": null,
+      "matches": [],
+      "tabelle": null,
+      "kreuztabelle": {
+        "ligaData": null,
+        "teams": [
+          {
+            "seasonTeamId": 432429,
+            "teamCompetitionId": 432429,
+            "teamPermanentId": 186126,
+            "teamname": "FC Tegernheim",
+            "teamnameSmall": "TEG1",
+            "clubId": 428,
+            "verzicht": false
+          }
+        ],
+        "crossTable": [
+          [
+            {
+              "home": true,
+              "result": "36:62",
+              "matchId": 2803682
+            },
+            {
+              "home": false,
+              "result": null,
+              "matchId": 2803695
+            }
+          ]
+        ]
+      },
+      "teamStatistik": null
+    },
+    "version": "11.42.2-d6f6aca",
+    ...
+  }
+  ```
+  
+  **Struktur:**
+  - `teams`: Array aller Teams in der Liga (gleiche Reihenfolge wie Matrix)
+  - `crossTable`: 2D-Matrix (Array von Arrays)
+    - Äußeres Array: Zeilen (Heimteams)
+    - Inneres Array: Spalten (Gastteams)
+    - Diagonale (i === j): Heimspiel-Markierung
+}

@@ -1,0 +1,690 @@
+{
+    "timestamp": "2025-10-13T18:20:00+0200",
+    "status": "0",
+    "message": "",
+    "data": {
+        "wam": {
+            "token": "0",
+            "verbandIds": [
+                2
+            ],
+            "gebietIds": null,
+            "ligatypIds": null,
+            "akgGeschlechtIds": null,
+            "altersklasseIds": null,
+            "spielklasseIds": null,
+            "sortBy": 1
+        },
+        "verbaende": [
+            {
+                "id": 100,
+                "label": "Bundesligen",
+                "hits": 33
+            },
+            {
+                "id": 29,
+                "label": "Deutsche Meisterschaften",
+                "hits": 8
+            },
+            {
+                "id": 40,
+                "label": "Deutscher Rollstuhlbasketball",
+                "hits": 21
+            },
+            {
+                "id": 30,
+                "label": "Regionalliga Nord",
+                "hits": 8
+            },
+            {
+                "id": 32,
+                "label": "Regionalliga Südost",
+                "hits": 6
+            },
+            {
+                "id": 31,
+                "label": "Regionalliga Südwest",
+                "hits": 21
+            },
+            {
+                "id": 33,
+                "label": "Regionalliga West",
+                "hits": 9
+            },
+            {
+                "id": 1,
+                "label": "Baden-Württemberg",
+                "hits": 228
+            },
+            {
+                "id": 2,
+                "label": "Bayern",
+                "hits": 374
+            },
+            {
+                "id": 3,
+                "label": "Berlin",
+                "hits": 101
+            },
+            {
+                "id": 14,
+                "label": "Brandenburg",
+                "hits": 40
+            },
+            {
+                "id": 4,
+                "label": "Bremen",
+                "hits": 40
+            },
+            {
+                "id": 5,
+                "label": "Hamburg",
+                "hits": 71
+            },
+            {
+                "id": 6,
+                "label": "Hessen",
+                "hits": 125
+            },
+            {
+                "id": 12,
+                "label": "Mecklenburg-Vorpommern",
+                "hits": 28
+            },
+            {
+                "id": 7,
+                "label": "Niedersachsen",
+                "hits": 203
+            },
+            {
+                "id": 11,
+                "label": "Nordrhein-Westfalen",
+                "hits": 342
+            },
+            {
+                "id": 8,
+                "label": "Rheinland-Pfalz",
+                "hits": 76
+            },
+            {
+                "id": 9,
+                "label": "Saarland",
+                "hits": 25
+            },
+            {
+                "id": 15,
+                "label": "Sachsen",
+                "hits": 106
+            },
+            {
+                "id": 13,
+                "label": "Sachsen-Anhalt",
+                "hits": 80
+            },
+            {
+                "id": 10,
+                "label": "Schleswig-Holstein",
+                "hits": 47
+            },
+            {
+                "id": 16,
+                "label": "Thüringen",
+                "hits": 53
+            }
+        ],
+        "gebiete": [
+            {
+                "id": "_",
+                "bezirk": null,
+                "kreis": null,
+                "hits": 60
+            },
+            {
+                "id": "1_",
+                "bezirk": "Oberbayern",
+                "kreis": null,
+                "hits": 20
+            },
+            {
+                "id": "1_1",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Mitte",
+                "hits": 40
+            },
+            {
+                "id": "1_2",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Nordost",
+                "hits": 7
+            },
+            {
+                "id": "1_3",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis Südost",
+                "hits": 15
+            },
+            {
+                "id": "1_4",
+                "bezirk": "Oberbayern",
+                "kreis": "Kreis West",
+                "hits": 33
+            },
+            {
+                "id": "2_",
+                "bezirk": "Schwaben",
+                "kreis": null,
+                "hits": 41
+            },
+            {
+                "id": "3_",
+                "bezirk": "Mittelfranken",
+                "kreis": null,
+                "hits": 51
+            },
+            {
+                "id": "4_",
+                "bezirk": "Oberpfalz",
+                "kreis": null,
+                "hits": 26
+            },
+            {
+                "id": "5_",
+                "bezirk": "Oberfranken",
+                "kreis": null,
+                "hits": 51
+            },
+            {
+                "id": "6_",
+                "bezirk": "Unterfranken",
+                "kreis": null,
+                "hits": 30
+            }
+        ],
+        "ligatypen": [
+            {
+                "id": 1,
+                "label": "Ligaspielbetrieb",
+                "hits": 307
+            },
+            {
+                "id": 2,
+                "label": "Pokalrunde",
+                "hits": 12
+            },
+            {
+                "id": 3,
+                "label": "Auf-/Abstiegsspiele",
+                "hits": 41
+            },
+            {
+                "id": 4,
+                "label": "Play-Off-/Qualifikation",
+                "hits": 0
+            },
+            {
+                "id": 9,
+                "label": "Meisterschaft/Finals",
+                "hits": 8
+            },
+            {
+                "id": 10,
+                "label": "Liga ohne Spielplan",
+                "hits": 0
+            },
+            {
+                "id": 11,
+                "label": "Vorbereitungsliga",
+                "hits": 6
+            }
+        ],
+        "agkGeschlechtList": [
+            {
+                "id": "3_1",
+                "akg": "Senioren",
+                "geschlecht": "m",
+                "hits": 66
+            },
+            {
+                "id": "3_2",
+                "akg": "Senioren",
+                "geschlecht": "w",
+                "hits": 35
+            },
+            {
+                "id": "2_1",
+                "akg": "Jugend",
+                "geschlecht": "m",
+                "hits": 206
+            },
+            {
+                "id": "2_2",
+                "akg": "Jugend",
+                "geschlecht": "w",
+                "hits": 126
+            }
+        ],
+        "altersklassen": [
+            {
+                "id": 1,
+                "label": "Senioren",
+                "hits": 90
+            },
+            {
+                "id": 30,
+                "label": "Ü30",
+                "hits": 2
+            },
+            {
+                "id": 32,
+                "label": "Ü35",
+                "hits": 2
+            },
+            {
+                "id": 40,
+                "label": "Ü40",
+                "hits": 3
+            },
+            {
+                "id": 45,
+                "label": "Ü45",
+                "hits": 1
+            },
+            {
+                "id": 50,
+                "label": "Ü50",
+                "hits": 1
+            },
+            {
+                "id": 55,
+                "label": "Ü55",
+                "hits": 1
+            },
+            {
+                "id": 20,
+                "label": "U20",
+                "hits": 12
+            },
+            {
+                "id": 18,
+                "label": "U18",
+                "hits": 36
+            },
+            {
+                "id": 16,
+                "label": "U16",
+                "hits": 48
+            },
+            {
+                "id": 15,
+                "label": "U15",
+                "hits": 1
+            },
+            {
+                "id": 14,
+                "label": "U14",
+                "hits": 60
+            },
+            {
+                "id": 12,
+                "label": "U12",
+                "hits": 61
+            },
+            {
+                "id": 11,
+                "label": "U11",
+                "hits": 1
+            },
+            {
+                "id": 10,
+                "label": "U10",
+                "hits": 46
+            },
+            {
+                "id": 9,
+                "label": "U9",
+                "hits": 3
+            },
+            {
+                "id": 8,
+                "label": "U8",
+                "hits": 6
+            }
+        ],
+        "spielklassen": [
+            {
+                "id": 2010,
+                "label": "Regionalliga",
+                "hits": 2
+            },
+            {
+                "id": 2011,
+                "label": "1. Regionalliga",
+                "hits": 2
+            },
+            {
+                "id": 2012,
+                "label": "2. Regionalliga",
+                "hits": 2
+            },
+            {
+                "id": 315,
+                "label": "Bayernliga",
+                "hits": 19
+            },
+            {
+                "id": 336,
+                "label": "Bayernpokal",
+                "hits": 2
+            },
+            {
+                "id": 337,
+                "label": "Bay. Meisterschaft",
+                "hits": 24
+            },
+            {
+                "id": 317,
+                "label": "Landesliga",
+                "hits": 8
+            },
+            {
+                "id": 338,
+                "label": "Bezirksoberliga",
+                "hits": 84
+            },
+            {
+                "id": 339,
+                "label": "Bezirkspokal",
+                "hits": 10
+            },
+            {
+                "id": 340,
+                "label": "Bezirksmeisterschaft",
+                "hits": 2
+            },
+            {
+                "id": 320,
+                "label": "Bezirksliga",
+                "hits": 58
+            },
+            {
+                "id": 325,
+                "label": "Bezirksklasse",
+                "hits": 50
+            },
+            {
+                "id": 330,
+                "label": "Kreisliga",
+                "hits": 70
+            },
+            {
+                "id": 335,
+                "label": "Kreisklasse",
+                "hits": 41
+            }
+        ],
+        "ligaListe": {
+            "startAtIndex": 0,
+            "ligen": [
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47599,
+                    "liganame": "Regionalliga Damen HR-Nord (RLD-HRN)",
+                    "liganr": 203,
+                    "skName": "Regionalliga",
+                    "skNameSmall": "RL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 32,
+                    "verbandName": "Regionalliga Südost",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47600,
+                    "liganame": "Regionalliga Damen HR-Süd (RLD-HRS)",
+                    "liganr": 205,
+                    "skName": "Regionalliga",
+                    "skNameSmall": "RL",
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 32,
+                    "verbandName": "Regionalliga Südost",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47610,
+                    "liganame": "1. Regionalliga Herren HR-Nord (1RLH-HRN)",
+                    "liganr": 206,
+                    "skName": "1. Regionalliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 32,
+                    "verbandName": "Regionalliga Südost",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47609,
+                    "liganame": "1. Regionalliga Herren HR-Süd (1RLH-HRS)",
+                    "liganr": 204,
+                    "skName": "1. Regionalliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 32,
+                    "verbandName": "Regionalliga Südost",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47614,
+                    "liganame": "2. Regionalliga Nord (2RLN)",
+                    "liganr": 201,
+                    "skName": "2. Regionalliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 32,
+                    "verbandName": "Regionalliga Südost",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47615,
+                    "liganame": "2. Regionalliga Süd (2RLS)",
+                    "liganr": 202,
+                    "skName": "2. Regionalliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 32,
+                    "verbandName": "Regionalliga Südost",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47652,
+                    "liganame": "Bayernliga Herren  Nord (ByLHN) 25/26",
+                    "liganr": 20001,
+                    "skName": "Bayernliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47653,
+                    "liganame": "Bayernliga Herren Mitte (ByLHM) 25/26",
+                    "liganr": 20002,
+                    "skName": "Bayernliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47654,
+                    "liganame": "Bayernliga Herren Süd (ByLHS) 25/26",
+                    "liganr": 20006,
+                    "skName": "Bayernliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 1,
+                    "geschlecht": "männlich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                },
+                {
+                    "seasonId": null,
+                    "seasonName": null,
+                    "actualMatchDay": null,
+                    "ligaId": 47655,
+                    "liganame": "Bayernliga Nord Damen (ByLND) 25/26",
+                    "liganr": 20004,
+                    "skName": "Bayernliga",
+                    "skNameSmall": null,
+                    "skEbeneId": 0,
+                    "skEbeneName": "Verband",
+                    "akName": "Senioren",
+                    "geschlechtId": 2,
+                    "geschlecht": "weiblich",
+                    "verbandId": 2,
+                    "verbandName": "Bayern",
+                    "bezirknr": null,
+                    "bezirkName": null,
+                    "kreisnr": null,
+                    "kreisname": null,
+                    "statisticType": null,
+                    "vorabliga": false,
+                    "tableExists": null,
+                    "crossTableExists": null
+                }
+            ],
+            "hasMoreData": true,
+            "size": 10
+        }
+    },
+    "version": "11.42.2-b100829",
+    "dateFormat": "yyyy-MM-dd",
+    "timeFormat": "yyyy-MM-dd'T'HH:mm:ssZ",
+    "timeFormatShort": "HH:mm",
+    "serverInstance": "www",
+    "username": null,
+    "appContext": "https://www.basketball-bund.net"
+}

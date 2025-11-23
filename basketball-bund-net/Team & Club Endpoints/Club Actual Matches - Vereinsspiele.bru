@@ -1,0 +1,28 @@
+meta {
+  name: Club Actual Matches - Vereinsspiele
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseURL}}/rest/club/id/:clubId/actualmatches?justHome=true&rangeDays=150
+  body: none
+  auth: none
+}
+
+params:query {
+  justHome: true
+  rangeDays: 150
+}
+
+params:path {
+  clubId: 4468
+}
+
+docs {
+  **Query Parameters:**
+  - `justHome` (boolean): Nur Heimspiele? (default: false)
+  - `rangeDays` (number): Zeitraum in Tagen (default: 7)
+  
+  **Response:** Alle aktuellen/kommenden Spiele eines Vereins
+}

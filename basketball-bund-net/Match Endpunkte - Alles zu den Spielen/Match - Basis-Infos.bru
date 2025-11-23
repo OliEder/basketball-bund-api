@@ -1,0 +1,86 @@
+meta {
+  name: Match - Basis-Infos
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseURL}}/rest/match/id/:matchId
+  body: none
+  auth: none
+}
+
+params:path {
+  matchId: 2812371
+}
+
+docs {
+  **Response:** 
+  ```JSON
+  {
+  ligaData": {
+        "seasonId": 2025,
+        "seasonName": "2025/2026",
+        "actualMatchDay": {
+          "spieltag": 6,
+          "bezeichnung": "6. Spieltag"
+        },
+        "ligaId": 51520,
+        "liganame": "1. Bundesliga (easyCredit BBL)",
+        "liganr": 1,
+        "skName": "1. Bundesliga",
+        "skNameSmall": "BL",
+        "skEbeneId": 0,
+        "skEbeneName": "Verband",
+        "akName": "Senioren",
+        "geschlechtId": 1,
+        "geschlecht": "männlich",
+        "verbandId": 100,
+        "verbandName": "Bundesligen",
+        "bezirknr": null,
+        "bezirkName": null,
+        "kreisnr": null,
+        "kreisname": null,
+        "statisticType": 0,
+        "vorabliga": false,
+        "tableExists": true,
+        "crossTableExists": true
+      },
+      "matchId": 2812371,
+      "matchDay": 3,
+      "matchNo": 26,
+      "kickoffDate":"2025-10-05",    // YYYY-MM-DD
+      "kickoffTime": "18:00",        // HH:MM
+      "homeTeam": {
+        "seasonTeamId": 429397,
+        "teamCompetitionId": 429397,
+        "teamPermanentId": 163073,
+        "teamname": "FC Bayern München Basketball",
+        "teamnameSmall": "FCB",
+        "clubId": 4162,
+        "verzicht": false
+      },
+      "guestTeam": {
+        "seasonTeamId": 429408,
+        "teamCompetitionId": 429408,
+        "teamPermanentId": 313960,
+        "teamname": "Veolia Towers Hamburg",
+        "teamnameSmall": "HH",
+        "clubId": 4850,
+        "verzicht": false
+      },
+      "result": "36:62",              // String! "heim:gast"
+      "ergebnisbestaetigt": false,
+      "statisticType": 0,
+      "verzicht": false,
+      "abgesagt": false,
+      "matchResult": null,
+      "matchInfo": null,
+      "matchBoxscore": null,
+      "playByPlay": null,
+      "hasPlayByPlay": false
+    },
+  ...
+  }
+  ```
+}

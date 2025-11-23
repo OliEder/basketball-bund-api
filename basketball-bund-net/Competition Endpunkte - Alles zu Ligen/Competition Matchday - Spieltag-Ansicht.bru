@@ -1,0 +1,101 @@
+meta {
+  name: Competition Matchday - Spieltag-Ansicht
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseURL}}/rest/competition/id/:ligaId/matchday/:matchDay
+  body: none
+  auth: inherit
+}
+
+params:path {
+  matchDay: 
+  ligaId: 51962
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  **Parameter:**
+  - `ligaId` (required): Liga-ID
+  - `matchDay` (optional): Spieltag-Nummer (1-N)
+    - Wenn nicht angegeben: Aktueller Spieltag
+  
+  **Response:**
+  ```json
+  {
+    "timestamp": "2025-10-29T13:30:31+0100",
+    "status": "0",
+    "message": "",
+    "data": {
+      "prevSpieltag": {
+        "spieltag": 5,
+        "bezeichnung": "5. Spieltag"
+      },
+      "selSpieltag": {
+        "spieltag": 6,
+        "bezeichnung": "6. Spieltag"
+      },
+      "selSpielDatum": null,
+      "nextSpieltag": {
+        "spieltag": 7,
+        "bezeichnung": "7. Spieltag"
+      },
+      "ligaData": {
+        "seasonId": 2025,
+        "seasonName": "2025/2026",
+        "actualMatchDay": {
+          "spieltag": 4,
+          "bezeichnung": "4. Spieltag"
+        },
+        "ligaId": 51933,
+        "liganame": "U14 weiblich Bezirksoberliga",
+        ...
+      },
+      "spieltage": [
+        {
+          "spieltag": 1,
+          "bezeichnung": "1. Spieltag"
+        },
+        {
+          "spieltag": 2,
+          "bezeichnung": "2. Spieltag"
+        }
+      ],
+      "matches": [
+        {
+          "matchId": 2803682,
+          "matchDay": 6,
+          "kickoffDate": "2025-10-05",
+          "kickoffTime": "18:00",
+          "homeTeam": {...},
+          "guestTeam": {...},
+          "result": "36:62",
+          "ergebnisbestaetigt": false,
+          "verzicht": false,
+          "abgesagt": false
+        }
+      ],
+      "tabelle": null,
+      "kreuztabelle": null,
+      "teamStatistik": null
+    },
+    "version": "11.42.2-d6f6aca",
+    ...
+  }
+  ```
+  
+  **Wichtige Felder:**
+  - `prevSpieltag`: Vorheriger Spieltag (Navigation)
+  - `selSpieltag`: Aktuell ausgewählter Spieltag
+  - `nextSpieltag`: Nächster Spieltag (Navigation)
+  - `actualMatchDay`: Echter aktueller Spieltag der Liga
+  - `spieltage`: Alle verfügbaren Spieltage als Array
+  - `matches`: Nur Spiele des ausgewählten Spieltags
+  
+}

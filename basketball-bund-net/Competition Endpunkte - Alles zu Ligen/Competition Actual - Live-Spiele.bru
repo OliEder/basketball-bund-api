@@ -1,0 +1,21 @@
+meta {
+  name: Competition Actual - Live-Spiele
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseURL}}/rest/competition/actual/id/:ligaId
+  body: none
+  auth: none
+}
+
+params:path {
+  ligaId: 51962
+}
+
+docs {
+  **Endpoint:** `GET /rest/competition/actual/id/{ligaId}`
+  
+  **Response:** Ähnlich wie Spielplan, aber nur laufende Spiele mit Live-Zwischenständen.
+}

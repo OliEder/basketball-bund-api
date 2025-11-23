@@ -1,0 +1,35 @@
+meta {
+  name: Competition List - Liga-Details
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseURL}}/rest/competition/list
+  body: json
+  auth: none
+}
+
+body:json {
+  [{{ligaIds}}]
+    
+}
+
+vars:pre-request {
+  ligaIds: 51931, 51962, 52105, 50520
+}
+
+docs {
+  **Request:**
+  ```json
+  [51961, 51962]  // Array von Liga-IDs
+  ```
+  
+  **Response:** Ähnlich wie WAM Liga List, aber mit vollständigeren Details.
+  
+  enthält Werte für:
+  ```json
+  "seasonId": 2025,
+  "seasonName": "2025/2026"
+  ```
+}

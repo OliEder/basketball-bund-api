@@ -1,0 +1,50 @@
+docs {
+  # DBB Basketball-Bund.net REST API - Reverse Engineered by Oliver Eder
+  
+  **Version:** 1.0
+  **Basis-URL:** `https://www.basketball-bund.net/rest`  
+  **Authentifizierung:** Keine erforderlich (öffentliche API)  
+  **Datum:** 29. Oktober 2025
+  
+  ---
+  ## Überblick
+  
+  Die Basketball-Bund.net API bietet umfassenden Zugriff auf:
+  - ✅ Wettbewerbs-/Liga-Suche mit komplexen Filtern
+  - ✅ Tabellenstände und Kreuztabellen
+  - ✅ Spielpläne und Live-Ergebnisse
+  - ✅ Detaillierte Spiel-Statistiken (Boxscores)
+  - ✅ Team- und Vereinsinformationen
+  
+  **Wichtig für Integrationen:**
+  - ⚠️ CORS-Proxy erforderlich für Browser-Requests
+  - ✅ Alle Daten öffentlich zugänglich
+  - ✅ Keine Rate-Limits dokumentiert (empfohlen: max. 1 req/sec)
+  
+  ---
+  
+  ## Standard Response-Struktur
+  
+  **Alle Endpoints** liefern Responses im gleichen Wrapper-Format:
+  
+  ```typescript
+  interface ApiResponse<T> {
+    timestamp: string;        // ISO 8601: "2025-10-17T17:12:38+0200"
+    status: string;           // "0" = Success
+    message: string;          // Fehlermeldung (leer bei Erfolg)
+    data: T;                  // Eigentliche Nutzdaten
+    version: string;          // API-Version: "11.42.2-b100829"
+    dateFormat: string;       // "yyyy-MM-dd"
+    timeFormat: string;       // "yyyy-MM-dd'T'HH:mm:ssZ"
+    timeFormatShort: string;  // "HH:mm"
+    serverInstance: string;   // "www"
+    username: string | null;  // null (keine Auth)
+    appContext: string;       // "https://www.basketball-bund.net"
+  }
+  ```
+  
+  **Status-Codes:**
+  - `"0"` = Erfolg
+  - `"1"` = Fehler (Details in `message`)
+  
+}
