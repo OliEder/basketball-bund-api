@@ -18,15 +18,14 @@ jobs:
           python-version: "3.12"
 
       - name: Install Schemathesis
-        run: pip install schemathesis==4.15.1
+        run: pip install schemathesis==3.39.16
 
       - name: Run Schemathesis against live API
         run: |
           schemathesis run basketball-bund-net-api-V1.yaml \
-            --url https://www.basketball-bund.net \
-            --phases examples \
-            --report junit \
-            --report-junit-path schemathesis-report.xml
+            --base-url https://www.basketball-bund.net \
+            --hypothesis-phases=explicit \
+            --junit-xml=schemathesis-report.xml
 
       - name: Upload test report
         if: always()

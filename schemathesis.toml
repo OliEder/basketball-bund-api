@@ -1,8 +1,8 @@
 # Schemathesis configuration for basketball-bund.net API contract testing
-# https://schemathesis.readthedocs.io/en/stable/configuration/
-# Schemathesis version: 4.15.1
+# Using schemathesis 3.39.16 (4.x has a bug with allOf + nullable schemas)
 
-url = "https://www.basketball-bund.net"
+[schemathesis]
+base-url = "https://www.basketball-bund.net"
 request-timeout = 30
-phases = ["examples"]
+hypothesis-phases = ["explicit"]
 checks = ["not_a_server_error", "status_code_conformance", "content_type_conformance", "response_schema_conformance"]
