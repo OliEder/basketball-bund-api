@@ -564,10 +564,6 @@ components:
           example: ""
         data:
           description: Eigentliche Nutzdaten (Struktur variiert je nach Endpoint, kann Object oder Array sein)
-          oneOf:
-            - type: object
-            - type: array
-              items: {}
         version:
           type: string
           description: API-Version
