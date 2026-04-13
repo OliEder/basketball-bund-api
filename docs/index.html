@@ -10,6 +10,14 @@
     <div id="swagger-ui"></div>
     <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
     <script>
+      function buildSnippet(req, bodyFn, wrapFn) {
+        const url = req.url;
+        const method = req.method.toUpperCase();
+        const headers = Object.entries(req.headers || {});
+        const body = req.body;
+        return wrapFn(url, method, headers, body ? bodyFn(body) : null);
+      }
+
       SwaggerUIBundle({
         url: "./basketball-bund-net-api-V1.yaml",
         dom_id: "#swagger-ui",
@@ -22,7 +30,34 @@
           generators: {
             curl_bash: { title: "cURL (bash)", syntax: "bash" },
             curl_powershell: { title: "cURL (PowerShell)", syntax: "powershell" },
-            curl_cmd: { title: "cURL (CMD)", syntax: "bash" },
+            js_fetch: {
+              title: "JavaScript (fetch)",
+              syntax: "javascript",
+              fn: (req) => {
+                const url = req.url;
+                const method = req.method.toUpperCase();
+                const headers = req.headers || {};
+                const body = req.body;
+                const headersStr = Object.entries(headers)
+                  .map(([k, v]) => `    "${k}": "${v}"`)
+                  .join(",\n");
+                const bodyStr = body ? `,\n  body: JSON.stringify(${body})` : "";
+                return `const response = await fetch("${url}", {\n  method: "${method}",\n  headers: {\n${headersStr}\n  }${bodyStr}\n});\nconst data = await response.json();\nconsole.log(data);`;
+              },
+            },
+            python_requests: {
+              title: "Python (requests)",
+              syntax: "python",
+              fn: (req) => {
+                const url = req.url;
+                const method = req.method.toLowerCase();
+                const headers = req.headers || {};
+                const body = req.body;
+                const headersStr = JSON.stringify(headers, null, 4);
+                const bodyStr = body ? `, json=${body}` : "";
+                return `import requests\n\nheaders = ${headersStr}\nresponse = requests.${method}("${url}", headers=headers${bodyStr})\nprint(response.json())`;
+              },
+            },
           },
           defaultExpanded: true,
           languages: null,
