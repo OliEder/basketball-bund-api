@@ -9,7 +9,7 @@ info:
     - Spielpläne und Live-Ergebnisse
     - Detaillierte Spiel-Statistiken (Boxscores)
     - Team- und Vereinsinformationen
-
+    
     **Wichtig:** 
     - CORS-Proxy erforderlich für Browser-Requests
     - Viele Boolean-Felder können `null` sein (null ≠ false!)
@@ -19,26 +19,26 @@ info:
     url: https://www.basketball-bund.net
 
 servers:
-- url: https://www.basketball-bund.net
-  description: Produktions-Server
+  - url: https://www.basketball-bund.net
+    description: Produktions-Server
 
 tags:
-- name: WAM
-  description: Wettbewerbs-/Liga-Suche mit Filtern
-- name: Competition
-  description: Liga-Details, Tabellen, Spielpläne
-- name: Match
-  description: Spiel-Details und Statistiken
-- name: Team
-  description: Team-bezogene Endpoints
-- name: Club
-  description: Vereins-bezogene Endpoints
+  - name: WAM
+    description: Wettbewerbs-/Liga-Suche mit Filtern
+  - name: Competition
+    description: Liga-Details, Tabellen, Spielpläne
+  - name: Match
+    description: Spiel-Details und Statistiken
+  - name: Team
+    description: Team-bezogene Endpoints
+  - name: Club
+    description: Vereins-bezogene Endpoints
 
 paths:
   # WAM Endpoints
   /rest/wam/data:
     post:
-      tags: [ WAM ]
+      tags: [WAM]
       summary: WAM Data - Filter-Optionen laden
       operationId: getWamData
       description: Lädt verfügbare Filter-Optionen für Liga-Suche
@@ -58,19 +58,19 @@ paths:
 
   /rest/wam/liga/list:
     post:
-      tags: [ WAM ]
+      tags: [WAM]
       summary: WAM Liga List - Ligen suchen
       operationId: searchLigen
       description: Sucht Ligen basierend auf Filtern (Pagination via startAtIndex)
       parameters:
-      - name: startAtIndex
-        in: query
-        description: Pagination Offset (0, 10, 20, ...)
-        required: false
-        schema:
-          type: integer
-          default: 0
-          example: 0
+        - name: startAtIndex
+          in: query
+          description: Pagination Offset (0, 10, 20, ...)
+          required: false
+          schema:
+            type: integer
+            default: 0
+            example: 0
       requestBody:
         required: true
         content:
@@ -88,7 +88,7 @@ paths:
   # Competition Endpoints
   /rest/competition/list:
     post:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition List - Liga-Details
       operationId: getCompetitionList
       description: Lädt Details zu einer oder mehreren Ligen (inkl. Ligaleiter-Kontakt)
@@ -100,7 +100,7 @@ paths:
               type: array
               items:
                 type: integer
-              example: [ 51961, 51962 ]
+              example: [51961, 51962]
       responses:
         '200':
           description: Liga-Details
@@ -111,16 +111,16 @@ paths:
 
   /rest/competition/table/id/{ligaId}:
     get:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition Table - Tabelle
       operationId: getCompetitionTable
       description: |
         Lädt die Tabelle einer Liga
-
+        
         **Gefüllte Felder:** `ligaData`, `tabelle`  
         **Null-Felder:** `prevSpieltag`, `selSpieltag`, `nextSpieltag`, `spieltage`, `matches`, `kreuztabelle`, `teamStatistik`
       parameters:
-      - $ref: '#/components/parameters/LigaIdParam'
+        - $ref: '#/components/parameters/LigaIdParam'
       responses:
         '200':
           description: Tabelle der Liga
@@ -128,30 +128,30 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/CompetitionDataContainer'
-                      - type: object
-                        required: [ tabelle ]
-                        properties:
-                          tabelle:
-                            $ref: '#/components/schemas/Tabelle'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/CompetitionDataContainer'
+                          - type: object
+                            required: [tabelle]
+                            properties:
+                              tabelle:
+                                $ref: '#/components/schemas/Tabelle'
 
   /rest/competition/spielplan/id/{ligaId}:
     get:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition Spielplan - Spielplan
       operationId: getCompetitionSpielplan
       description: |
         Lädt den kompletten Spielplan einer Liga
-
+        
         **Gefüllte Felder:** `ligaData`, `matches`  
         **Null-Felder:** `prevSpieltag`, `selSpieltag`, `nextSpieltag`, `spieltage`, `tabelle`, `kreuztabelle`, `teamStatistik`
       parameters:
-      - $ref: '#/components/parameters/LigaIdParam'
+        - $ref: '#/components/parameters/LigaIdParam'
       responses:
         '200':
           description: Spielplan der Liga
@@ -159,33 +159,33 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/CompetitionDataContainer'
-                      - type: object
-                        required: [ matches ]
-                        properties:
-                          matches:
-                            type: array
-                            items:
-                              $ref: '#/components/schemas/Match'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/CompetitionDataContainer'
+                          - type: object
+                            required: [matches]
+                            properties:
+                              matches:
+                                type: array
+                                items:
+                                  $ref: '#/components/schemas/Match'
 
   /rest/competition/crosstable/id/{ligaId}:
     get:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition Crosstable - Kreuztabelle
       operationId: getCompetitionCrosstable
       description: |
         Lädt die Kreuztabelle einer Liga
-
+        
         **Verfügbarkeit:** Nur wenn `ligaData.crossTableExists = true`  
         **Gefüllte Felder:** `ligaData`, `kreuztabelle`  
         **Null-Felder:** `prevSpieltag`, `selSpieltag`, `nextSpieltag`, `spieltage`, `matches`, `tabelle`, `teamStatistik`
       parameters:
-      - $ref: '#/components/parameters/LigaIdParam'
+        - $ref: '#/components/parameters/LigaIdParam'
       responses:
         '200':
           description: Kreuztabelle
@@ -193,36 +193,37 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/CompetitionDataContainer'
-                      - type: object
-                        required: [ kreuztabelle ]
-                        properties:
-                          kreuztabelle:
-                            $ref: '#/components/schemas/Kreuztabelle'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/CompetitionDataContainer'
+                          - type: object
+                            required: [kreuztabelle]
+                            properties:
+                              kreuztabelle:
+                                $ref: '#/components/schemas/Kreuztabelle'
 
   /rest/competition/id/{ligaId}/matchday/{matchDay}:
     get:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition Matchday - Spieltag-Ansicht
       operationId: getCompetitionMatchday
       description: |
         Lädt Spiele eines bestimmten Spieltags (ohne matchDay = aktueller Spieltag)
-
+        
         **Gefüllte Felder:** `ligaData`, `prevSpieltag`, `selSpieltag`, `nextSpieltag`, `spieltage`, `matches`  
         **Null-Felder:** `selSpielDatum`, `tabelle`, `kreuztabelle`, `teamStatistik`
       parameters:
-      - name: matchDay
-        in: path
-        description: Spieltag-Nummer (1-N). Weglassen für aktuellen Spieltag.
-        schema:
-          type: integer
-          example: 6
-      - $ref: '#/components/parameters/LigaIdParam'
+        - $ref: '#/components/parameters/LigaIdParam'
+        - name: matchDay
+          in: path
+          description: Spieltag-Nummer (1-N). Weglassen für aktuellen Spieltag.
+          required: false
+          schema:
+            type: integer
+            example: 6
       responses:
         '200':
           description: Spieltag-Daten mit Navigation
@@ -230,44 +231,44 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/CompetitionDataContainer'
-                      - type: object
-                        required: [ prevSpieltag, selSpieltag, nextSpieltag, spieltage, matches ]
-                        properties:
-                          prevSpieltag:
-                            $ref: '#/components/schemas/SpieltagInfo'
-                          selSpieltag:
-                            $ref: '#/components/schemas/SpieltagInfo'
-                          nextSpieltag:
-                            $ref: '#/components/schemas/SpieltagInfo'
-                          spieltage:
-                            type: array
-                            description: Alle verfügbaren Spieltage der Liga
-                            items:
-                              $ref: '#/components/schemas/SpieltagInfo'
-                          matches:
-                            type: array
-                            description: Spiele des ausgewählten Spieltags
-                            items:
-                              $ref: '#/components/schemas/Match'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/CompetitionDataContainer'
+                          - type: object
+                            required: [prevSpieltag, selSpieltag, nextSpieltag, spieltage, matches]
+                            properties:
+                              prevSpieltag:
+                                $ref: '#/components/schemas/SpieltagInfo'
+                              selSpieltag:
+                                $ref: '#/components/schemas/SpieltagInfo'
+                              nextSpieltag:
+                                $ref: '#/components/schemas/SpieltagInfo'
+                              spieltage:
+                                type: array
+                                description: Alle verfügbaren Spieltage der Liga
+                                items:
+                                  $ref: '#/components/schemas/SpieltagInfo'
+                              matches:
+                                type: array
+                                description: Spiele des ausgewählten Spieltags
+                                items:
+                                  $ref: '#/components/schemas/Match'
 
   /rest/competition/actual/id/{ligaId}:
     get:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition Actual - Live-Spiele
       operationId: getCompetitionActual
       description: |
         Lädt laufende Spiele mit Live-Zwischenständen
-
+        
         **Gefüllte Felder:** `ligaData`, `matches` (nur laufende Spiele)  
         **Null-Felder:** Rest
       parameters:
-      - $ref: '#/components/parameters/LigaIdParam'
+        - $ref: '#/components/parameters/LigaIdParam'
       responses:
         '200':
           description: Live-Spiele
@@ -275,33 +276,33 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/CompetitionDataContainer'
-                      - type: object
-                        required: [ matches ]
-                        properties:
-                          matches:
-                            type: array
-                            items:
-                              $ref: '#/components/schemas/Match'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/CompetitionDataContainer'
+                          - type: object
+                            required: [matches]
+                            properties:
+                              matches:
+                                type: array
+                                items:
+                                  $ref: '#/components/schemas/Match'
 
   /rest/competition/teamstatistic/id/{ligaId}:
     get:
-      tags: [ Competition ]
+      tags: [Competition]
       summary: Competition Team Statistics
       operationId: getCompetitionTeamStatistics
       description: |
         Lädt Team-Statistiken einer Liga
-
+        
         **Verfügbarkeit:** Nur bei Ligen mit vollständiger Spielstatistik  
         **Gefüllte Felder:** `ligaData`, `teamStatistik`  
         **Null-Felder:** `prevSpieltag`, `selSpieltag`, `nextSpieltag`, `spieltage`, `matches`, `tabelle`, `kreuztabelle`
       parameters:
-      - $ref: '#/components/parameters/LigaIdParam'
+        - $ref: '#/components/parameters/LigaIdParam'
       responses:
         '200':
           description: Team-Statistiken
@@ -309,31 +310,31 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/CompetitionDataContainer'
-                      - type: object
-                        required: [ teamStatistik ]
-                        properties:
-                          teamStatistik:
-                            $ref: '#/components/schemas/TeamStatistik'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/CompetitionDataContainer'
+                          - type: object
+                            required: [teamStatistik]
+                            properties:
+                              teamStatistik:
+                                $ref: '#/components/schemas/TeamStatistik'
 
   # Match Endpoints
   /rest/match/id/{matchId}:
     get:
-      tags: [ Match ]
+      tags: [Match]
       summary: Match - Basis-Infos
       operationId: getMatch
       description: |
         Lädt Basis-Informationen zu einem Spiel
-
+        
         **Gefüllt:** Match-Basis-Daten  
         **Null:** `matchResult`, `matchInfo`, `matchBoxscore`, `playByPlay`
       parameters:
-      - $ref: '#/components/parameters/MatchIdParam'
+        - $ref: '#/components/parameters/MatchIdParam'
       responses:
         '200':
           description: Match Details
@@ -341,24 +342,24 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      $ref: '#/components/schemas/Match'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        $ref: '#/components/schemas/Match'
 
   /rest/match/id/{matchId}/matchInfo:
     get:
-      tags: [ Match ]
+      tags: [Match]
       summary: Match Info - Erweiterte Details
       operationId: getMatchInfo
       description: |
         Lädt erweiterte Details (Halle, Schiedsrichter)
-
+        
         **Gefüllt:** Match-Basis + `matchInfo` (spielfeld, srList)  
         **Null:** `matchResult`, `matchBoxscore`, `playByPlay`
       parameters:
-      - $ref: '#/components/parameters/MatchIdParam'
+        - $ref: '#/components/parameters/MatchIdParam'
       responses:
         '200':
           description: Erweiterte Match-Details
@@ -366,30 +367,30 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/Match'
-                      - type: object
-                        required: [ matchInfo ]
-                        properties:
-                          matchInfo:
-                            $ref: '#/components/schemas/MatchInfo'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/Match'
+                          - type: object
+                            required: [matchInfo]
+                            properties:
+                              matchInfo:
+                                $ref: '#/components/schemas/MatchInfo'
 
   /rest/match/id/{matchId}/boxscore:
     get:
-      tags: [ Match ]
+      tags: [Match]
       summary: Match Boxscore - Spieler-Statistiken
       operationId: getMatchBoxscore
       description: |
         Lädt detaillierte Spieler-Statistiken
-
+        
         **Gefüllt:** Match-Basis + `matchResult` + `matchBoxscore`  
         **Null:** `matchInfo`, `playByPlay`
       parameters:
-      - $ref: '#/components/parameters/MatchIdParam'
+        - $ref: '#/components/parameters/MatchIdParam'
       responses:
         '200':
           description: Boxscore mit Spieler-Stats
@@ -397,61 +398,38 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      allOf:
-                      - $ref: '#/components/schemas/Match'
-                      - type: object
-                        required: [ matchResult, matchBoxscore ]
-                        properties:
-                          matchResult:
-                            $ref: '#/components/schemas/MatchResult'
-                          matchBoxscore:
-                            $ref: '#/components/schemas/MatchBoxscore'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        allOf:
+                          - $ref: '#/components/schemas/Match'
+                          - type: object
+                            required: [matchResult, matchBoxscore]
+                            properties:
+                              matchResult:
+                                $ref: '#/components/schemas/MatchResult'
+                              matchBoxscore:
+                                $ref: '#/components/schemas/MatchBoxscore'
 
   # Team & Club Endpoints
-  /media/{teamPermanentId}/logo:
-    get:
-      tags: [ Team ]
-      summary: Team Logo - Team-Logo
-      operationId: getTeamLogo
-      description: Lädt das Logo eines Teams (permanente ID verwenden!)
-      parameters:
-      - name: teamPermanentId
-        in: path
-        description: Permanente Team-ID (NICHT seasonTeamId!)
-        required: true
-        schema:
-          type: integer
-          example: 167036
-      responses:
-        '200':
-          description: Team-Logo als Bild
-          content:
-            image/png:
-              schema:
-                type: string
-                format: binary
-
   /rest/team/id/{teamPermanentId}/matches:
     get:
-      tags: [ Team ]
+      tags: [Team]
       summary: Team Matches - Team-Spiele
       operationId: getTeamMatches
       description: |
         Lädt alle Spiele eines Teams (permanente ID verwenden!)
-
+        
         **WICHTIG:** teamPermanentId verwenden (bleibt über Saisons konstant)
       parameters:
-      - name: teamPermanentId
-        in: path
-        description: Permanente Team-ID (NICHT seasonTeamId!)
-        required: true
-        schema:
-          type: integer
-          example: 167036
+        - name: teamPermanentId
+          in: path
+          description: Permanente Team-ID (NICHT seasonTeamId!)
+          required: true
+          schema:
+            type: integer
+            example: 167036
       responses:
         '200':
           description: Array aller Team-Spiele
@@ -459,43 +437,43 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      type: array
-                      items:
-                        $ref: '#/components/schemas/Match'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Match'
 
   /rest/club/id/{clubId}/actualmatches:
     get:
-      tags: [ Club ]
+      tags: [Club]
       summary: Club Actual Matches - Vereinsspiele
       operationId: getClubActualMatches
       description: Lädt aktuelle/kommende Spiele eines Vereins
       parameters:
-      - name: clubId
-        in: path
-        description: Vereins-ID
-        required: true
-        schema:
-          type: integer
-          example: 546
-      - name: justHome
-        in: query
-        description: Nur Heimspiele?
-        required: false
-        schema:
-          type: boolean
-          default: false
-      - name: rangeDays
-        in: query
-        description: Zeitraum in Tagen
-        required: false
-        schema:
-          type: integer
-          default: 7
-          example: 14
+        - name: clubId
+          in: path
+          description: Vereins-ID
+          required: true
+          schema:
+            type: integer
+            example: 546
+        - name: justHome
+          in: query
+          description: Nur Heimspiele?
+          required: false
+          schema:
+            type: boolean
+            default: false
+        - name: rangeDays
+          in: query
+          description: Zeitraum in Tagen
+          required: false
+          schema:
+            type: integer
+            default: 7
+            example: 14
       responses:
         '200':
           description: Array der Vereins-Spiele
@@ -503,13 +481,13 @@ paths:
             application/json:
               schema:
                 allOf:
-                - $ref: '#/components/schemas/ApiResponseWrapper'
-                - type: object
-                  properties:
-                    data:
-                      type: array
-                      items:
-                        $ref: '#/components/schemas/Match'
+                  - $ref: '#/components/schemas/ApiResponseWrapper'
+                  - type: object
+                    properties:
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Match'
 
 components:
   parameters:
@@ -521,7 +499,7 @@ components:
       schema:
         type: integer
         example: 51961
-
+    
     MatchIdParam:
       name: matchId
       in: path
@@ -538,36 +516,34 @@ components:
     ApiResponseWrapper:
       type: object
       required:
-      - timestamp
-      - status
-      - message
-      - data
-      - version
-      - dateFormat
-      - timeFormat
-      - timeFormatShort
-      - serverInstance
-      - appContext
+        - timestamp
+        - status
+        - message
+        - data
+        - version
+        - dateFormat
+        - timeFormat
+        - timeFormatShort
+        - serverInstance
+        - appContext
       properties:
         timestamp:
           type: string
-          description: "Server-Zeitstempel (ISO 8601, z.B. 2025-10-29T13:30:31+0100)"
+          format: date-time
+          description: Server-Zeitstempel (ISO 8601)
           example: "2025-10-29T13:30:31+0100"
         status:
           type: string
           description: "0 = Erfolg, 1 = Fehler"
-          enum: [ "0", "1" ]
+          enum: ["0", "1"]
           example: "0"
         message:
           type: string
           description: Fehlermeldung (leer bei Erfolg)
           example: ""
         data:
-          description: Eigentliche Nutzdaten (Struktur variiert je nach Endpoint, kann Object oder Array sein)
-          oneOf:
-            - type: object
-            - type: array
-              items: {}
+          type: object
+          description: Eigentliche Nutzdaten (Struktur variiert je nach Endpoint)
         version:
           type: string
           description: API-Version
@@ -602,7 +578,7 @@ components:
       description: |
         Gemeinsame Container-Struktur für Competition-Endpoints.
         Je nach Endpoint sind unterschiedliche Felder gefüllt oder null.
-
+        
         | Endpoint | Gefüllte Felder |
         |----------|----------------|
         | /table | ligaData, tabelle |
@@ -612,16 +588,16 @@ components:
         | /actual | ligaData, matches |
         | /teamstatistic | ligaData, teamStatistik |
       required:
-      - ligaData
+        - ligaData
       properties:
         prevSpieltag:
           allOf:
-          - $ref: '#/components/schemas/SpieltagInfo'
+            - $ref: '#/components/schemas/SpieltagInfo'
           nullable: true
           description: "Vorheriger Spieltag (nur bei /matchday gefüllt)"
         selSpieltag:
           allOf:
-          - $ref: '#/components/schemas/SpieltagInfo'
+            - $ref: '#/components/schemas/SpieltagInfo'
           nullable: true
           description: "Ausgewählter Spieltag (nur bei /matchday gefüllt)"
         selSpielDatum:
@@ -631,7 +607,7 @@ components:
           description: "Ausgewähltes Datum (meist null)"
         nextSpieltag:
           allOf:
-          - $ref: '#/components/schemas/SpieltagInfo'
+            - $ref: '#/components/schemas/SpieltagInfo'
           nullable: true
           description: "Nächster Spieltag (nur bei /matchday gefüllt)"
         ligaData:
@@ -650,17 +626,17 @@ components:
           description: "Spiele (gefüllt bei /spielplan, /matchday, /actual)"
         tabelle:
           allOf:
-          - $ref: '#/components/schemas/Tabelle'
+            - $ref: '#/components/schemas/Tabelle'
           nullable: true
           description: "Tabelle (nur bei /table gefüllt)"
         kreuztabelle:
           allOf:
-          - $ref: '#/components/schemas/Kreuztabelle'
+            - $ref: '#/components/schemas/Kreuztabelle'
           nullable: true
           description: "Kreuztabelle (nur bei /crosstable gefüllt)"
         teamStatistik:
           allOf:
-          - $ref: '#/components/schemas/TeamStatistik'
+            - $ref: '#/components/schemas/TeamStatistik'
           nullable: true
           description: "Team-Statistiken (nur bei /teamstatistic gefüllt)"
 
@@ -670,8 +646,8 @@ components:
     SpieltagInfo:
       type: object
       required:
-      - spieltag
-      - bezeichnung
+        - spieltag
+        - bezeichnung
       properties:
         spieltag:
           type: integer
@@ -687,7 +663,7 @@ components:
       nullable: true
       description: |
         **KRITISCH:** Kann null, true oder false sein!
-
+        
         ❌ FALSCH: `if (!value)` → trifft auf null UND false zu!  
         ✅ RICHTIG: `if (value === true)` oder `if (value !== true)`  
         ✅ RICHTIG: `const val = value ?? false` (null-coalescing)
@@ -698,7 +674,7 @@ components:
     WamFilterRequest:
       type: object
       required:
-      - token
+        - token
       properties:
         token:
           type: integer
@@ -709,13 +685,13 @@ components:
           items:
             type: integer
           description: "Filter nach Landesverbänden (z.B. [2] = Bayern)"
-          example: [ 2 ]
+          example: [2]
         gebietIds:
           type: array
           items:
             type: string
           description: "Filter nach Bezirken (z.B. ['4_'] = Oberpfalz)"
-          example: [ "4_" ]
+          example: ["4_"]
         ligatypIds:
           type: array
           items:
@@ -733,13 +709,13 @@ components:
           items:
             type: integer
           description: "Filter nach Altersklassen (z.B. [10, 12] = U10, U12)"
-          example: [ 10, 12 ]
+          example: [10, 12]
         spielklasseIds:
           type: array
           items:
             type: integer
           description: "Filter nach Spielklassen (z.B. [320] = Bezirksliga)"
-          example: [ 320 ]
+          example: [320]
 
     # ==========================================
     # CORE ENTITIES
@@ -747,12 +723,12 @@ components:
     Team:
       type: object
       required:
-      - seasonTeamId
-      - teamCompetitionId
-      - teamPermanentId
-      - teamname
-      - clubId
-      - verzicht
+        - seasonTeamId
+        - teamCompetitionId
+        - teamPermanentId
+        - teamname
+        - clubId
+        - verzicht
       properties:
         seasonTeamId:
           type: integer
@@ -779,20 +755,20 @@ components:
     LigaData:
       type: object
       required:
-      - seasonId
-      - seasonName
-      - ligaId
-      - liganame
-      - liganr
-      - skName
-      - skEbeneId
-      - skEbeneName
-      - akName
-      - geschlechtId
-      - geschlecht
-      - verbandId
-      - verbandName
-      - vorabliga
+        - seasonId
+        - seasonName
+        - ligaId
+        - liganame
+        - liganr
+        - skName
+        - skEbeneId
+        - skEbeneName
+        - akName
+        - geschlechtId
+        - geschlecht
+        - verbandId
+        - verbandName
+        - vorabliga
       properties:
         seasonId:
           type: integer
@@ -803,7 +779,7 @@ components:
           example: "2025/2026"
         actualMatchDay:
           allOf:
-          - $ref: '#/components/schemas/SpieltagInfo'
+            - $ref: '#/components/schemas/SpieltagInfo'
           nullable: true
           description: Aktueller Spieltag der Liga
         ligaId:
@@ -828,7 +804,7 @@ components:
           description: "Spielklassen-Ebene (0=Verband, 1=Bezirk, 2=Kreis)"
         skEbeneName:
           type: string
-          enum: [ Verband, Bezirk, Kreis ]
+          enum: [Verband, Bezirk, Kreis]
         akName:
           type: string
           description: Altersklasse
@@ -838,7 +814,7 @@ components:
           description: "1=männlich, 2=weiblich, 3=mix"
         geschlecht:
           type: string
-          enum: [ männlich, weiblich, mix ]
+          enum: [männlich, weiblich, mix]
         verbandId:
           type: integer
           description: "Landesverband-ID (z.B. 2=Bayern, 100=Bundesligen)"
@@ -876,17 +852,17 @@ components:
     Match:
       type: object
       required:
-      - matchId
-      - matchDay
-      - matchNo
-      - kickoffDate
-      - kickoffTime
-      - homeTeam
-      - guestTeam
+        - matchId
+        - matchDay
+        - matchNo
+        - kickoffDate
+        - kickoffTime
+        - homeTeam
+        - guestTeam
       properties:
         ligaData:
           allOf:
-          - $ref: '#/components/schemas/LigaData'
+            - $ref: '#/components/schemas/LigaData'
           nullable: true
           description: "Liga-Details (meist null in matches-Arrays, gefüllt nur bei /match/{id})"
         matchId:
@@ -934,17 +910,17 @@ components:
           description: Wurde das Spiel abgesagt?
         matchResult:
           allOf:
-          - $ref: '#/components/schemas/MatchResult'
+            - $ref: '#/components/schemas/MatchResult'
           nullable: true
           description: "Detailliertes Ergebnis (nur bei /boxscore gefüllt)"
         matchInfo:
           allOf:
-          - $ref: '#/components/schemas/MatchInfo'
+            - $ref: '#/components/schemas/MatchInfo'
           nullable: true
           description: "Zusatz-Infos (nur bei /matchInfo gefüllt)"
         matchBoxscore:
           allOf:
-          - $ref: '#/components/schemas/MatchBoxscore'
+            - $ref: '#/components/schemas/MatchBoxscore'
           nullable: true
           description: "Spieler-Statistiken (nur bei /boxscore gefüllt)"
         playByPlay:
@@ -958,16 +934,16 @@ components:
     TabellenEintrag:
       type: object
       required:
-      - rang
-      - team
-      - anzspiele
-      - anzGewinnpunkte
-      - anzVerlustpunkte
-      - s
-      - n
-      - koerbe
-      - gegenKoerbe
-      - korbdiff
+        - rang
+        - team
+        - anzspiele
+        - anzGewinnpunkte
+        - anzVerlustpunkte
+        - s
+        - n
+        - koerbe
+        - gegenKoerbe
+        - korbdiff
       properties:
         rang:
           type: integer
@@ -1003,9 +979,9 @@ components:
     WurfStats:
       type: object
       required:
-      - made
-      - attempted
-      - quota
+        - made
+        - attempted
+        - quota
       properties:
         made:
           type: number
@@ -1030,8 +1006,8 @@ components:
     Tabelle:
       type: object
       required:
-      - entries
-      - bbl
+        - entries
+        - bbl
       properties:
         ligaData:
           type: object
@@ -1048,8 +1024,8 @@ components:
     Kreuztabelle:
       type: object
       required:
-      - teams
-      - crossTable
+        - teams
+        - crossTable
       properties:
         ligaData:
           type: object
@@ -1071,9 +1047,9 @@ components:
             items:
               type: object
               required:
-              - home
-              - result
-              - matchId
+                - home
+                - result
+                - matchId
               properties:
                 home:
                   type: boolean
@@ -1091,9 +1067,9 @@ components:
     TeamStatistik:
       type: object
       required:
-      - stand
-      - statisticEntries
-      - bbl
+        - stand
+        - statisticEntries
+        - bbl
       properties:
         ligaData:
           type: object
@@ -1108,22 +1084,22 @@ components:
           items:
             type: object
             required:
-            - esz
-            - pts
-            - twoPoints
-            - threePoints
-            - wt
-            - onePoints
-            - ro
-            - rd
-            - rt
-            - as
-            - st
-            - to
-            - bs
-            - fouls
-            - eff
-            - tableTeamEntry
+              - esz
+              - pts
+              - twoPoints
+              - threePoints
+              - wt
+              - onePoints
+              - ro
+              - rd
+              - rt
+              - as
+              - st
+              - to
+              - bs
+              - fouls
+              - eff
+              - tableTeamEntry
             properties:
               esz:
                 type: number
@@ -1189,8 +1165,8 @@ components:
       type: object
       description: Detailliertes Viertel-Ergebnis
       required:
-      - heimEndstand
-      - gastEndstand
+        - heimEndstand
+        - gastEndstand
       properties:
         heimEndstand:
           type: integer
@@ -1239,11 +1215,11 @@ components:
         spielfeld:
           type: object
           required:
-          - id
-          - bezeichnung
-          - strasse
-          - plz
-          - ort
+            - id
+            - bezeichnung
+            - strasse
+            - plz
+            - ort
           properties:
             id:
               type: integer
@@ -1265,15 +1241,15 @@ components:
           items:
             type: object
             required:
-            - rolle
-            - personData
+              - rolle
+              - personData
             properties:
               rolle:
                 type: object
                 required:
-                - id
-                - name
-                - kurzname
+                  - id
+                  - name
+                  - kurzname
                 properties:
                   id:
                     type: integer
@@ -1287,10 +1263,10 @@ components:
               personData:
                 type: object
                 required:
-                - id
-                - vorname
-                - nachname
-                - anonym
+                  - id
+                  - vorname
+                  - nachname
+                  - anonym
                 properties:
                   id:
                     type: integer
@@ -1336,23 +1312,23 @@ components:
     PlayerStats:
       type: object
       required:
-      - esz
-      - pts
-      - twoPoints
-      - threePoints
-      - wt
-      - onePoints
-      - ro
-      - rd
-      - rt
-      - as
-      - st
-      - to
-      - bs
-      - fouls
-      - eff
-      - player
-      - isf
+        - esz
+        - pts
+        - twoPoints
+        - threePoints
+        - wt
+        - onePoints
+        - ro
+        - rd
+        - rt
+        - as
+        - st
+        - to
+        - bs
+        - fouls
+        - eff
+        - player
+        - isf
       properties:
         esz:
           type: number
@@ -1400,10 +1376,10 @@ components:
         player:
           type: object
           required:
-          - playerId
-          - no
-          - person
-          - anonym
+            - playerId
+            - no
+            - person
+            - anonym
           properties:
             playerId:
               type: integer
@@ -1414,10 +1390,10 @@ components:
             person:
               type: object
               required:
-              - id
-              - vorname
-              - nachname
-              - anonym
+                - id
+                - vorname
+                - nachname
+                - anonym
               properties:
                 id:
                   type: integer
@@ -1441,108 +1417,108 @@ components:
     # ==========================================
     WamDataResponse:
       allOf:
-      - $ref: '#/components/schemas/ApiResponseWrapper'
-      - type: object
-        properties:
-          data:
-            type: object
-            required:
-            - wam
-            - verbaende
-            - gebiete
-            - altersklassen
-            - spielklassen
-            - ligaListe
-            properties:
-              wam:
-                type: object
-                description: Echo der gesendeten Filter
-              verbaende:
-                type: array
-                items:
+        - $ref: '#/components/schemas/ApiResponseWrapper'
+        - type: object
+          properties:
+            data:
+              type: object
+              required:
+                - wam
+                - verbaende
+                - gebiete
+                - altersklassen
+                - spielklassen
+                - ligaListe
+              properties:
+                wam:
                   type: object
-                  properties:
-                    id:
-                      type: integer
-                    label:
-                      type: string
-                    hits:
-                      type: integer
-                      description: Anzahl Ligen in diesem Verband
-              gebiete:
-                type: array
-                items:
+                  description: Echo der gesendeten Filter
+                verbaende:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      label:
+                        type: string
+                      hits:
+                        type: integer
+                        description: Anzahl Ligen in diesem Verband
+                gebiete:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      bezirk:
+                        type: string
+                        nullable: true
+                      kreis:
+                        type: string
+                        nullable: true
+                      hits:
+                        type: integer
+                altersklassen:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      label:
+                        type: string
+                      hits:
+                        type: integer
+                spielklassen:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      label:
+                        type: string
+                      hits:
+                        type: integer
+                ligaListe:
                   type: object
+                  description: Vorschau der ersten 10 Ligen
                   properties:
-                    id:
-                      type: string
-                    bezirk:
-                      type: string
-                      nullable: true
-                    kreis:
-                      type: string
-                      nullable: true
-                    hits:
+                    startAtIndex:
                       type: integer
-              altersklassen:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
+                    ligen:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/LigaData'
+                    hasMoreData:
+                      type: boolean
+                    size:
                       type: integer
-                    label:
-                      type: string
-                    hits:
-                      type: integer
-              spielklassen:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    label:
-                      type: string
-                    hits:
-                      type: integer
-              ligaListe:
-                type: object
-                description: Vorschau der ersten 10 Ligen
-                properties:
-                  startAtIndex:
-                    type: integer
-                  ligen:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/LigaData'
-                  hasMoreData:
-                    type: boolean
-                  size:
-                    type: integer
 
     LigaListResponse:
       allOf:
-      - $ref: '#/components/schemas/ApiResponseWrapper'
-      - type: object
-        properties:
-          data:
-            type: object
-            required:
-            - ligaListe
-            properties:
-              ligaListe:
-                type: object
-                properties:
-                  startAtIndex:
-                    type: integer
-                  ligen:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/LigaData'
-                  hasMoreData:
-                    type: boolean
-                    description: Weitere Seiten verfügbar?
-                  size:
-                    type: integer
-                    description: Anzahl pro Seite (meist 10)
+        - $ref: '#/components/schemas/ApiResponseWrapper'
+        - type: object
+          properties:
+            data:
+              type: object
+              required:
+                - ligaListe
+              properties:
+                ligaListe:
+                  type: object
+                  properties:
+                    startAtIndex:
+                      type: integer
+                    ligen:
+                      type: array
+                      items:
+                        $ref: '#/components/schemas/LigaData'
+                    hasMoreData:
+                      type: boolean
+                      description: Weitere Seiten verfügbar?
+                    size:
+                      type: integer
+                      description: Anzahl pro Seite (meist 10)

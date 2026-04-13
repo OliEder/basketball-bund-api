@@ -1,0 +1,35 @@
+name: API Contract Check
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  contract-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Schemathesis
+        run: pip install schemathesis
+
+      - name: Run Schemathesis against live API
+        run: |
+          schemathesis run basketball-bund-net-api-V1.yaml \
+            --base-url https://www.basketball-bund.net \
+            --report=junit \
+            --output-file=schemathesis-report.xml
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: schemathesis-report
+          path: schemathesis-report.xml

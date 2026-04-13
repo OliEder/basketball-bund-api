@@ -1,5 +1,9 @@
 # API-Dokumentation Basketball-bund.net (Reverse Engineering)
 
+[![API Contract Check](https://github.com/OliEder/basketball-bund-api/actions/workflows/api-contract-check.yml/badge.svg)](https://github.com/OliEder/basketball-bund-api/actions/workflows/api-contract-check.yml)
+
+**[Swagger UI — API interaktiv ausprobieren](https://olieder.github.io/basketball-bund-api/)**
+
 ## Hinweis zur API-Dokumentation
 
 Diese Dokumentation beschreibt öffentlich von der Website [www.basketball-bund.net](https://www.basketball-bund.net) einsehbare REST-API-Endpunkte, die mittels standardmäßiger Entwicklerwerkzeuge (z. B. „Network“-Tab der Browser Developer Tools) nachvollzogen wurden. Die hier aufgeführten Informationen sind **ausschließlich** das Ergebnis der öffentlichen und legitimen Analyse von Datenströmen, wie sie jedem Besucher der Website technisch zugänglich sind.
