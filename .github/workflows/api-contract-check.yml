@@ -24,6 +24,7 @@ jobs:
         run: |
           schemathesis run basketball-bund-net-api-V1.yaml \
             --url https://www.basketball-bund.net \
+            --phases examples \
             --report junit \
             --report-junit-path schemathesis-report.xml
 
