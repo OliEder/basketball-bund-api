@@ -2,34 +2,7 @@
 # https://schemathesis.readthedocs.io/en/stable/configuration/
 # Schemathesis version: 4.15.1
 
-base-url = "https://www.basketball-bund.net"
+url = "https://www.basketball-bund.net"
 request-timeout = 30
-
-# Run only the examples phase (uses OAS examples, no random/fuzz data)
-[phases.examples]
-enabled = true
-
-[phases.coverage]
-enabled = false
-
-[phases.fuzzing]
-enabled = false
-
-[phases.stateful]
-enabled = false
-
-# Disable all checks by default, then enable specific ones
-[checks]
-enabled = false
-
-[checks.not_a_server_error]
-enabled = true
-
-[checks.status_code_conformance]
-enabled = true
-
-[checks.content_type_conformance]
-enabled = true
-
-[checks.response_schema_conformance]
-enabled = true
+phases = ["examples"]
+checks = ["not_a_server_error", "status_code_conformance", "content_type_conformance", "response_schema_conformance"]
