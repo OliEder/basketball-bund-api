@@ -1,7 +1,7 @@
-# Schemathesis configuration for basketball-bund.net API contract testing
-# Using schemathesis 3.39.16 (4.x has a bug with allOf + nullable schemas)
+# Schemathesis 3.39.16 configuration for basketball-bund.net API contract testing
+# Note: 4.x has a bug with allOf + nullable schemas (hypothesis_jsonschema TypeError)
 
-[schemathesis]
+[tool.schemathesis]
 base-url = "https://www.basketball-bund.net"
 request-timeout = 30
 hypothesis-phases = ["explicit"]
