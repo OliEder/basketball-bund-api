@@ -24,8 +24,8 @@ jobs:
         run: |
           schemathesis run basketball-bund-net-api-V1.yaml \
             --url https://www.basketball-bund.net \
-            --report=junit \
-            --output-file=schemathesis-report.xml
+            --report junit \
+            --report-junit-path schemathesis-report.xml
 
       - name: Upload test report
         if: always()
